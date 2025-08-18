@@ -1,0 +1,2327 @@
+/*VARIABLES*/
+:root {
+    --mx-width: 1320px;
+    --color-title: #292930;
+    --color-text: #0D0D0D;
+    --color-subtitle: #c75c6f;
+    --color-text-body: #525260;
+    --color-description: #99A1AA;
+    --color-detail: #d7e1eb;
+    --color-primary-shadow: #00898020;
+    --color-primary: #008980;
+    --color-secondary: #fff;
+    --color-banner: #003833;
+    --color-text-btn: #3d6efd;
+    --color-bg-btn: #ffdc60;
+    --color-bg-cards: #f8f8f8;
+    --color-bg-projects: #EBF1F5;
+    --color-bg-dark: #27272E;
+    --color-hover-dark: #303015;
+
+}
+
+/*ESTILOS GENERALES*/
+html {
+    font-size: 62.5%;
+    /*definimos el rem*/
+    overflow-x: hidden;
+    /*esto significa que todo lo que sobre salga en x se esconda*/
+    scroll-behavior: unset;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.6rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-body);
+}
+
+.menu-mobile__logo-light {
+    display: block;
+}
+
+.menu-mobile__logo-dark {
+    display: none;
+}
+
+.navbar__logo-light {
+    display: block;
+}
+
+.navbar__logo-dark {
+    display: none;
+}
+
+/*ESTRUCTURA LAYOUT*/
+
+.layout {
+    width: 100%;
+    /* ocupa todo el ancho disponible */
+    /* nunca pasa de tu variable (1320px) */
+    margin: 0 auto;
+    /* la centra siempre */
+    min-width: auto;
+    /* quita el min-width:1200px original */
+    box-sizing: border-box;
+    /* paddings/borders no suman ancho extra */
+}
+
+/*Boton de responsive*/
+.navbar__mobile-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-mobile {
+
+    visibility: hidden;
+    opacity: 0;
+
+    position: fixed;
+    z-index: 10;
+    width: 30rem;
+
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+
+    background-color: var(--color-secondary);
+    top: 0;
+    left: -300px;
+    transition: all 300ms ease-in-out;
+    padding: 1rem;
+    padding-top: 0;
+    box-shadow: 0px 0px 85px 50px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+
+}
+
+.menu-mobile__header {
+    flex-shrink: 0;
+    /* no se encoge */
+}
+
+.menu-mobile__body {
+    flex: 1;
+    /* ocupa todo el espacio disponible */
+    overflow-y: auto;
+    /* aquí vive el scroll */
+}
+
+.menu-mobile__bottom {
+    flex-shrink: 0;
+    /* siempre visible abajo */
+}
+
+.menu-mobile--show {
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+
+}
+
+.menu-mobile__submenu {
+    display: none;
+    visibility: visible;
+    opacity: 1;
+
+    min-width: 100%;
+    padding: 0;
+    padding-bottom: 1rem;
+}
+
+
+/*ESTILOS MENU NAVEGACION Y CABECERA DE LA WEB*/
+
+.layout__menu {
+    width: 100%;
+    padding: 3.5rem 3rem;
+}
+
+.menu__navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /*los elementos centrados justo al medio*/
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.menu__navbar--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background-color: var(--color-secondary);
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 8rem;
+    backdrop-filter: blur(6px);
+    /* desenfoque detrás */
+}
+
+.navbar__logo {
+    /*imagen del logo hasta arriba*/
+    width: 187px;
+}
+
+.nav__list {
+    display: flex;
+    /*necesito los elementos cada uno al lado del otro en row*/
+    flex-direction: row;
+    justify-content: center;
+    /*acomodarlos*/
+    align-items: center;
+    gap: 0rem;
+
+}
+
+.nav__list>li {
+    display: flex;
+    align-items: center;
+}
+
+.nav__item {
+    /*posicion relat para trabajar con elementos after y befor para poder trabajar con posicion absoluta y que no se salgan*/
+    position: relative;
+    margin: 0 2rem;
+}
+
+/* Estilo base del enlace de contacto */
+.nav__title-contact {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: var(--color-secondary);
+    /* color inicial del texto */
+    border-radius: 30px;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
+    /* fondo original si lo hay */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    z-index: 1;
+    /* asegurar que el texto quede encima */
+}
+
+/* Círculo expansivo detrás del texto */
+.nav__title-contact::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-secondary);
+    /* color que cubrirá el texto */
+    border-radius: 30px;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+    z-index: -1;
+    /* detrás del texto */
+}
+
+/* Hover sobre el li que contiene el enlace */
+.nav__item-contact:hover .nav__title-contact::after {
+    transform: scale(1);
+    /* círculo aparece */
+}
+
+/* Invertimos colores del texto */
+.nav__item-contact:hover .nav__title-contact {
+    color: var(--color-primary);
+    /* ahora el texto toma el color del fondo original */
+}
+
+.nav__title {
+    position: relative;
+    /*por si tenemos que hacer algo dentro y se queda dentro de los limites*/
+    display: block;
+    font-weight: 500;
+    color: var(--color-text-body);
+    transition: all 300ms ease-in-out;
+    line-height: 3rem;
+}
+
+.nav__icon {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 0.2rem;
+    vertical-align: middle;
+    /*para que se quede en medio*/
+}
+
+.nav__title:hover {
+    color: var(--color-primary);
+}
+
+.nav__title::before {
+    content: " ";
+    height: 0.15rem;
+    width: 0;
+    background-color: var(--color-primary);
+    position: absolute;
+    /*para poder posicionar el elemento como yo quiera*/
+    bottom: 0.5rem;
+    /*para que la linea este debajo del texto de navegacion*/
+    left: 0;
+    opacity: 0;
+    transition: all 300ms linear;
+}
+
+.nav__title:hover::before {
+    /*esto es para que en vez de ser un elemento de subrayado, tenga un efecto de transicion*/
+    width: 100%;
+    opacity: 1;
+}
+
+.nav__submenu {
+    /*ahora a esconder los submenus*/
+    display: block;
+    position: absolute;
+    /*porque necesito que este de manera absoluta sobre cualquier cosa y oder controlar su posicion*/
+    top: 100%;
+    left: 2rem;
+    min-width: 19rem;
+    padding: 1.5rem 1rem;
+    border-radius: 0.4px;
+    background-color: var(--color-secondary);
+    box-shadow: 0px 13px 48px 0px rgba(0, 0, 0, 15%);
+    top: 5.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+    /*no puedo clicarlos*/
+    transition: all 300ms ease-in-out;
+}
+
+.nav__icon {
+    transition: all 400ms ease-in-out;
+}
+
+.nav__item:hover .nav__icon {
+    transform: rotate(90deg);
+}
+
+.nav__language {
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+/*transicion del menu*/
+.submenu__item {
+    opacity: 0;
+    transform: translateX(2rem);
+    transition: all 100ms ease-in-out;
+}
+
+.submenu__item:nth-child(1) {
+    transition-delay: 100ms;
+}
+
+.submenu__item:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.submenu__item:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.submenu__item:nth-child(4) {
+    transition-delay: 400ms;
+}
+
+.submenu__item:nth-child(5) {
+    transition-delay: 500ms;
+}
+
+.submenu__item:nth-child(6) {
+    transition-delay: 600ms;
+}
+
+
+.submenu__title {
+    display: block;
+    position: relative;
+    /*quiero que la posicion absolute que meta dentro de este actue dentro y no se salga*/
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-text-body);
+    padding: 0.7rem 1.5rem;
+    transition: all 300ms ease-in-out;
+}
+
+.nav__item:hover>.nav__submenu {
+    /* el > solo selecciona hijos directos de nav__item*/
+    opacity: 1;
+    z-index: 999;
+    left: 0;
+    visibility: visible;
+}
+
+.nav__item:hover .submenu__item {
+    /*esto es especificamente para que los elementos por si solos tambien hagan transicion*/
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.submenu__title:hover {
+    color: var(--color-primary);
+}
+
+.submenu__title::after {
+    content: " ";
+    top: 50%;
+    left: 0;
+    position: absolute;
+    height: 0.2rem;
+    width: 0;
+    background-color: var(--color-primary);
+    transition: all 300ms ease-in-out;
+}
+
+.submenu__title:hover::after {
+    width: 100%;
+    /*para que tache todo*/
+}
+
+/*ESTILOS PARA EL BANNER COMPLETO*/
+
+.layout__banner {
+    position: relative;
+    /*dentro voy a contener elementos con posiciones absolutas*/
+    margin: 0 3rem;
+
+    min-height: 60rem;
+    border-radius: 60px;
+    overflow: hidden;
+    background-color: var(--color-banner);
+    z-index: 1;
+    /*para que se vean los shapes*/
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.banner__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centra horizontal y verticalmente */
+    max-width: 40%;
+    /* Limita el tamaño máximo de la imagen */
+    width: 100%;
+    /* Se ajusta proporcionalmente */
+    z-index: 1;
+    /* Detrás del EKG */
+    pointer-events: none;
+    /* Para que no interfiera con clicks si hace falta */
+}
+
+.banner__ekg {
+    position: absolute;
+    inset: 0;
+    /* background-image: ...  <-- ELIMINA ESTA línea */
+    background-repeat: repeat-x;
+    background-size: 400px 100%;
+    animation: ekg-scroll 4s linear infinite;
+    filter: drop-shadow(0 0 6px #00ff99);
+}
+
+.banner__ekg svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 2400px;
+    /* igual al total de tu polyline */
+    transform: translateX(0);
+    animation: ekg-move 10s linear infinite;
+}
+
+@keyframes ekg-move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1200px);
+    }
+
+    /* la mitad para loop continuo */
+}
+
+.banner__content {
+    position: relative;
+    /*si no le coloco el relative*/
+    display: inline-block;
+    width: 60%;
+    padding: 0 1.5rem;
+    z-index: 5;
+}
+
+.banner__title {
+    color: var(--color-secondary);
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+}
+
+.banner__btn {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: var(--color-text-btn);
+    font-weight: bold;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    /*la primer letra de cada cosa sera capital*/
+    text-align: center;
+    padding: 2.8rem 4.5rem;
+    border-radius: 20px;
+    /*para que el circulo no se haga mas pequeño sera en px*/
+    box-shadow: 0px 44px 84px -24px var(--color-primary);
+    transition: all 300ms ease-in-out;
+}
+
+.banner__btn:hover {
+    background-color: var(--color-bg-btn);
+    color: var(--color-secondary);
+}
+
+
+
+.shapes__item {
+    position: absolute;
+    /*para controlar su posicion*/
+    z-index: 2;
+    pointer-events: none;
+}
+
+.shapes__item--shape1 {
+    text-align: right;
+    top: 0;
+    right: 0;
+    animation-name: showRight;
+    animation-duration: 1.5s;
+}
+
+@keyframes showRight {
+
+    /*desde el segundo 0 a 100*/
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.shapes__item--shape2 {
+    bottom: 0;
+    left: 0;
+    animation-name: showLeft;
+    animation-duration: 1.5s;
+
+}
+
+@keyframes showLeft {
+
+    /*desde el segundo 0 a 100*/
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.shapes__item--shape3 {
+    top: 34%;
+    left: 50%;
+    animation: moveShape3 20s infinite;
+}
+
+@keyframes moveShape3 {
+
+    /*desde el segundo 0 a 100*/
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    40% {
+        transform: translateX(50px) translateY(-200px);
+    }
+
+    75% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        /*movimiento natural*/
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.shapes__item--shape4 {
+    bottom: 24rem;
+    left: 45%;
+    animation: moveShape4 25s infinite;
+}
+
+@keyframes moveShape4 {
+
+    /*desde el segundo 0 a 100*/
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    40% {
+        transform: translateX(50px) translateY(-200px);
+    }
+
+    75% {
+        transform: translateX(-500px);
+    }
+
+    100% {
+        /*movimiento natural*/
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.shapes__item--shape4 .shapes__img {
+    opacity: 0.5;
+    width: 7.5rem;
+}
+
+.shapes__item--shape5 {
+    bottom: 12rem;
+    left: 53%;
+    animation: moveShape5 25s infinite;
+}
+
+@keyframes moveShape5 {
+
+    /*desde el segundo 0 a 100*/
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    40% {
+        transform: translateZ(80%);
+    }
+
+    75% {
+        transform: translateX(90px) translateY(-400px);
+    }
+
+    100% {
+        /*movimiento natural*/
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.shapes__item--shape6 {
+    bottom: 10rem;
+    left: 40rem;
+    animation: moveShape6 35s infinite;
+}
+
+@keyframes moveShape6 {
+
+    /*desde el segundo 0 a 100*/
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    40% {
+        transform: translateX(50px) translateY(-200px);
+    }
+
+    75% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        /*movimiento natural*/
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.shapes__item--shape7 {
+    top: 0;
+    right: 10rem;
+    z-index: 1;
+    animation-name: showTop;
+    animation-duration: 1.5s;
+}
+
+@keyframes showTop {
+
+    /*desde el segundo 0 a 100*/
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+
+/*ESTILOS COMPARTIDOS DE CSS*/
+
+/*--------------------------------------------*/
+/*HOME*/
+.layout__home,
+.layout__about,
+.layout__benefits,
+.layout__services,
+.layout__vision,
+.layout__process,
+.layout__testimonials,
+.layout__blogs {
+    width: 100%;
+    padding: 5rem 9rem;
+}
+
+.home__display {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.home__left {
+    width: 100%;
+    flex-basis: calc(50%);
+}
+
+.home__left-logo-img {
+    width: 15rem;
+    margin-right: 3rem;
+}
+
+.home__left-reviews {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.left-reviews__circles {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1rem;
+}
+
+.left-reviews-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--color-description);
+    margin-left: -10px;
+    z-index: 1;
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Asegura que el primer círculo no tenga margen negativo */
+.left-reviews-img:first-child {
+    margin-left: 0;
+}
+
+.home__stars {
+    color: orange;
+    font-size: 1rem;
+}
+
+.left-reviews__text {
+    font-size: 1rem;
+}
+
+.home__left-info {
+    margin-top: 2rem;
+}
+
+.left-info__title {
+    color: var(--color-title);
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.left-info__subtitle {
+    margin-top: 3rem;
+}
+
+.left-info__buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    gap: 2rem;
+}
+
+.left-info__button1 {
+    border-radius: 20px;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 1rem;
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.left-info__button1:hover {
+    transform: translateX(5px);
+}
+
+.left-info__button2 {
+    border-radius: 20px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.left-info__button2:hover {
+    transform: translateX(5px);
+}
+
+.left-info__ratings {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.left-info__rating {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.home__ratings-i {
+    font-size: 3rem;
+    color: var(--color-primary);
+}
+
+.left-info__rating-title {
+    color: var(--color-title);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.left-info__rating-subtitle {
+    font-size: 1.2rem;
+}
+
+.home__right {
+    position: relative;
+    background-color: var(--color-detail);
+    border: 4px solid var(--color-secondary);
+    border-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    flex-basis: calc(50%);
+    overflow: hidden;
+    /* Para que el fondo no sobresalga */
+    cursor: pointer;
+}
+
+.enlace-div {
+    display: block;
+    /* Para que pueda envolver todo el div */
+    color: inherit;
+    /* Mantener el color del texto original */
+    text-decoration: none;
+    /* Quitar subrayado */
+}
+
+.enlace-div:visited {
+    color: inherit;
+    /* Evitar cambio de color al visitar */
+}
+
+.enlace-div:hover {
+    cursor: pointer;
+    /* Que se note que es clicable */
+}
+
+/* Imagen principal */
+.home__right__img {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    height: 500px;
+    z-index: 1;
+    /* Detrás del container */
+}
+
+/* Contenedor inferior */
+.home__right__container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Deja espacio para el botón a la derecha */
+    padding: 1rem 1.5rem;
+    background: rgba(0, 0, 0, 0.192);
+    /* semitransparente */
+    /* semitransparente */
+    backdrop-filter: blur(2px);
+    /* difumina lo que hay DETRÁS */
+    -webkit-backdrop-filter: blur(2px);
+    /* soporte para Safari */
+    color: var(--color-secondary);
+    z-index: 2;
+    /* Encima de la imagen */
+
+}
+
+.home__right__title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+.home__right__name {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+/* Botón a la derecha del container */
+.button__go {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    padding: 0 1.5rem;
+    border-radius: 20px;
+    z-index: 2;
+
+}
+
+/* Estilo base del botón y el icono */
+.button__go__i {
+    position: relative;
+    color: var(--color-secondary);
+    z-index: 1;
+    /* icono encima */
+    transition: color 0.3s ease;
+}
+
+/* Círculo expansivo debajo del ícono */
+.button__go::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+    z-index: -1;
+    /* detrás del ícono */
+}
+
+/* Hover sobre todo el home__right */
+.home__right:hover .button__go::after {
+    transform: scale(1);
+}
+
+/* Invertimos color del ícono para que contraste */
+.home__right:hover .button__go__i {
+    color: var(--color-primary);
+}
+
+/*ABOUT*/
+
+.about__text {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--color-title);
+    line-height: 1.5;
+    letter-spacing: -1.8px;
+    padding-right: 5rem;
+}
+
+.about__span {
+    color: var(--color-description);
+    font-weight: 300;
+}
+
+.about_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas iguales */
+    grid-template-rows: auto auto;
+    /* 2 filas automáticas */
+    gap: 2rem;
+    /* espacio general entre elementos */
+}
+
+.about__space1 {
+    grid-column: 1 / 2;
+    /* Columna 1 */
+    grid-row: 1 / 2;
+    /* Fila 1 */
+    padding-right: 1rem;
+    /* espacio extra hacia la derecha */
+}
+
+.about__space2 {
+    grid-column: 2 / 4;
+    /* Columnas 2 a 3 */
+    grid-row: 1 / 2;
+    /* Fila 1 */
+}
+
+.about__space3 {
+    grid-column: 1 / 2;
+    /* Columna 1 */
+    grid-row: 2 / 3;
+    /* Fila 2 */
+    margin-top: 5rem;
+    /* espacio respecto a la fila de arriba */
+    padding-right: 1rem;
+    /* espacio extra hacia la derecha */
+
+}
+
+.about__space4 {
+    grid-column: 2 / 4;
+    /* Columna 3 */
+    grid-row: 2 / 3;
+    /* Fila 2 */
+    margin-top: 5rem;
+    /* espacio respecto a la fila de arriba */
+}
+
+.about__img {
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about__space4__display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas */
+    grid-template-rows: repeat(2, auto);
+    /* 2 filas */
+    gap: 5rem;
+    /* espacio entre ítems */
+}
+
+.about__space4__display>div {
+    transition: transform 0.4s ease;
+}
+
+.about__space4__display>div:hover {
+    transform: translateY(-5px);
+}
+
+.space4__arrow {
+    margin-bottom: 2rem;
+}
+
+.space4__number {
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: var(--color-title);
+}
+
+.space4__text {
+    line-height: 0.5;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--color-description);
+}
+
+/*BENEFITS*/
+
+.benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas iguales */
+    grid-template-rows: repeat(2, auto);
+    /* 2 filas automáticas */
+    gap: 2rem;
+    /* espacio entre items */
+    margin-top: 2rem;
+}
+
+.benefits__item1 {
+    grid-column: 1 / 2;
+    /* Columna 1 */
+    grid-row: 1 / 2;
+    /* Fila 1 */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid var(--color-detail);
+    border-radius: 30px;
+    padding: 3rem;
+
+}
+
+.benefits__item2 {
+    grid-column: 2 / 3;
+    /* Columna 2 */
+    grid-row: 1 / 2;
+    /* Fila 1 */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid var(--color-detail);
+    border-radius: 30px;
+    padding: 3rem;
+}
+
+.benefits__item3 {
+    grid-column: 1 / 2;
+    /* Columna 1 */
+    grid-row: 2 / 3;
+    /* Fila 2 */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid var(--color-detail);
+    border-radius: 30px;
+    padding: 3rem;
+}
+
+.benefits__item4 {
+    grid-column: 2 / 3;
+    /* Columna 2 */
+    grid-row: 2 / 3;
+    /* Fila 2 */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid var(--color-detail);
+    border-radius: 30px;
+    padding: 3rem;
+}
+
+.benefits__item5 {
+    grid-column: 3 / 4;
+    /* Columna 3 */
+    grid-row: 1 / 3;
+    /* Ocupa Fila 1 y 2 */
+    border: 0.5px solid var(--color-detail);
+    border-radius: 30px;
+    padding: 3rem;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s ease, transform 0.3s ease;
+
+}
+
+/* Puntitos ocultos inicialmente */
+.benefits__item5::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /* Solo la mitad */
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 8px 8px, 12px 12px, 20px 20px;
+    background-position: bottom center;
+    background-repeat: repeat;
+
+    /* Gradiente para difuminar hacia arriba */
+    mask-image: linear-gradient(to top, black 0%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+
+/* BENEFITS LOGO SMALL */
+.benefits__item5 .benefits__logo-small {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* IMAGEN DENTRO (si existe .benefits__img) */
+.benefits__item5 .benefits__img {
+    transition: transform 0.5s ease;
+}
+
+/* HOVER */
+.benefits__item5:hover {
+    /* Tal vez un ligero zoom para efecto elegante */
+    transform: translateY(-5px);
+}
+
+/* Mostrar puntitos al hacer hover */
+.benefits__item5:hover::before {
+    opacity: 1;
+}
+
+/* Invertir colores del logo small */
+.benefits__item5:hover .benefits__logo-small {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+/* Transformación de la imagen */
+.benefits__item5:hover .benefits__img {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.benefits__logo-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-secondary);
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}
+
+.benefits__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgb(3, 117, 79);
+    border: 2px solid var(--color-secondary);
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}
+
+.benefits__logo {
+    font-size: 2rem;
+}
+
+.benefits__title {
+    margin-top: 5rem;
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: var(--color-title);
+
+}
+
+.benefits__subtitle {
+    margin-top: 1.5rem;
+    font-weight: 400;
+}
+
+.benefits__item-title {
+    margin-top: 5rem;
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.benefits__item-span {
+    font-style: italic;
+    font-weight: 100;
+}
+
+.benefits__item-text {
+    color: var(--color-detail);
+}
+
+/*SERVICIOS*/
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas iguales */
+    grid-template-rows: repeat(2, auto);
+    /* 2 filas automáticas */
+    gap: 2rem;
+    /* espacio entre items */
+    margin-top: 2rem;
+}
+
+/************************************************/
+/* Transiciones iniciales para servicios */
+.services__item1,
+.services__item2,
+.services__item3,
+.services__item4,
+.services__item5,
+.services__item6 {
+    transition: transform 0.3s ease;
+    /* Movimiento suave */
+    cursor: pointer;
+}
+
+/* Hover para movimiento */
+.services__item1:hover,
+.services__item2:hover,
+.services__item3:hover,
+.services__item4:hover,
+.services__item5:hover,
+.services__item6:hover {
+    transform: translateY(-5px);
+    /* Leve elevación */
+}
+
+/* Transición para la imagen dentro */
+.services__item1 .services__img,
+.services__item2 .services__img,
+.services__item3 .services__img,
+.services__item4 .services__img,
+.services__item5 .services__img,
+.services__item6 .services__img {
+    transition: transform 0.5s ease;
+}
+
+/* Escala sutil al hacer hover sobre el contenedor */
+.services__item1:hover .services__img,
+.services__item2:hover .services__img,
+.services__item3:hover .services__img,
+.services__item4:hover .services__img,
+.services__item5:hover .services__img,
+.services__item6:hover .services__img {
+    transform: scale(1.05);
+    /* Zoom ligero */
+}
+
+/* Transición para el ícono de flecha */
+.services__item1 .services__arrow,
+.services__item2 .services__arrow,
+.services__item3 .services__arrow,
+.services__item4 .services__arrow,
+.services__item5 .services__arrow,
+.services__item6 .services__arrow {
+    transition: transform 0.3s ease;
+}
+
+/* Flecha se desplaza al hover */
+.services__item1:hover .services__arrow,
+.services__item2:hover .services__arrow,
+.services__item3:hover .services__arrow,
+.services__item4:hover .services__arrow,
+.services__item5:hover .services__arrow,
+.services__item6:hover .services__arrow {
+    transform: translateX(5px);
+}
+
+/*********************************************************/
+
+.services__item1 {
+    position: relative;
+    grid-column: 1 / 2;
+    /* Columna 1 */
+    grid-row: 1 / 2;
+    /* Fila 1 */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid var(--color-detail);
+    border-radius: 30px;
+    overflow: hidden;
+    height: 40rem;
+
+}
+
+.services__item2 {
+    position: relative;
+    grid-column: 2 / 3;
+    /* Columna 2 */
+    grid-row: 1 / 2;
+    /* Fila 1 */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid var(--color-detail);
+    border-radius: 30px;
+    overflow: hidden;
+    height: 40rem;
+}
+
+.services__item3 {
+    position: relative;
+    grid-column: 3 / 4;
+    /* Columna 1 */
+    grid-row: 1 / 2;
+    /* Fila 2 */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid var(--color-detail);
+    border-radius: 30px;
+    overflow: hidden;
+    height: 40rem;
+}
+
+.services__item4 {
+    position: relative;
+    grid-column: 1 / 2;
+    /* Columna 2 */
+    grid-row: 2 / 3;
+    /* Fila 2 */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid var(--color-detail);
+    border-radius: 30px;
+    overflow: hidden;
+    height: 40rem;
+}
+
+.services__item5 {
+    position: relative;
+    grid-column: 2 / 3;
+    /* Columna 2 */
+    grid-row: 2 / 3;
+    /* Fila 2 */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid var(--color-detail);
+    border-radius: 30px;
+    overflow: hidden;
+    height: 40rem;
+}
+
+.services__item6 {
+    position: relative;
+    grid-column: 3 / 4;
+    /* Columna 2 */
+    grid-row: 2 / 3;
+    /* Fila 2 */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid var(--color-detail);
+    border-radius: 30px;
+    overflow: hidden;
+    height: 40rem;
+}
+
+.services__item1 img,
+.services__item2 img,
+.services__item3 img,
+.services__item4 img,
+.services__item5 img,
+.services__item6 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* hace que cubra todo sin deformarse */
+    object-position: center;
+    /* centra la imagen */
+}
+
+.services__info {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 30px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    gap: 10px;
+    align-items: center;
+}
+
+.services__type {
+    color: var(--color-secondary);
+}
+
+.services__arrow {
+    position: relative;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    padding: 1rem;
+    color: var(--color-primary);
+    overflow: hidden;
+    z-index: 1;
+    /* icono por encima */
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.services__img {
+    flex-basis: 50%;
+
+}
+
+.services__image {
+    border-radius: 30px;
+    width: 500px;
+}
+
+/* Círculo expansivo debajo del icono */
+.services__arrow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+    z-index: -1;
+    /* se queda detrás del icono */
+}
+
+/* Hover: círculo crece */
+.services__item1:hover .services__arrow::after,
+.services__item2:hover .services__arrow::after,
+.services__item3:hover .services__arrow::after,
+.services__item4:hover .services__arrow::after,
+.services__item5:hover .services__arrow::after,
+.services__item6:hover .services__arrow::after {
+    transform: scale(1);
+}
+
+/* Hover: invertimos colores después de que el círculo esté visible */
+.services__item1:hover .services__arrow,
+.services__item2:hover .services__arrow,
+.services__item3:hover .services__arrow,
+.services__item4:hover .services__arrow,
+.services__item5:hover .services__arrow,
+.services__item6:hover .services__arrow {
+    color: var(--color-secondary);
+    /* icono se hace del color del fondo original */
+    border-color: var(--color-primary);
+}
+
+/*VISION*/
+
+.vision__display {
+    display: flex;
+    flex-direction: row;
+}
+
+.button__contact-vision {
+    margin-top: 2rem;
+}
+
+.button__contact-v {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: var(--color-secondary);
+    /* color inicial del texto */
+    border-radius: 30px;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
+    /* fondo original si lo hay */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    z-index: 1;
+    /* asegurar que el texto quede encima */
+}
+
+.button__contact-v::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-secondary);
+    /* color que cubrirá el texto */
+    border-radius: 30px;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+    z-index: -1;
+    /* detrás del texto */
+}
+
+/* Hover sobre el li que contiene el enlace */
+.button__contact-vision:hover .button__contact-v::after {
+    transform: scale(1);
+    /* círculo aparece */
+}
+
+/* Invertimos colores del texto */
+.button__contact-vision:hover .button__contact-v {
+    color: var(--color-primary);
+    /* ahora el texto toma el color del fondo original */
+}
+.vision__img{
+    flex-basis: 50%;
+    width: 100%;
+}
+.services__image{
+    width: 100%;
+}
+/*PROCESS*/
+
+.process__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas iguales */
+    grid-template-rows: repeat(3, auto);
+    /* 2 filas automáticas */
+    gap: 2rem;
+    /* espacio entre items */
+    margin: 5rem 0rem 10rem 0rem;
+}
+
+.process__item1,
+.process__item2,
+.process__item3,
+.process__item4,
+.process__item5,
+.process__item6,
+.process__item7,
+.process__item8,
+.process__item9 {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.process__icon {
+    background-color: var(--color-primary-shadow);
+    border-radius: 50%;
+    padding: 1rem;
+    align-self: center;
+    font-size: 2rem;
+    color: var(--color-primary);
+
+}
+
+.process__type {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.process__image {
+    flex-basis: 60%;
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.process__contact {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    background-color: var(--color-secondary);
+    border-radius: 25px;
+    padding: 2rem;
+    width: 300px;
+
+}
+
+.process__title {
+    display: flex;
+    position: relative;
+    padding: 0.5rem;
+    width: fit-content;
+    color: var(--color-text);
+    border: 1px solid var(--color-description);
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+.process__button {
+margin-top: 2rem;
+}
+.process__contact-us{
+position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: var(--color-secondary);
+    /* color inicial del texto */
+    border-radius: 30px;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
+    /* fondo original si lo hay */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    z-index: 1;
+    /* asegurar que el texto quede encima */
+}
+
+
+.process__contact-us::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-secondary);
+    /* color que cubrirá el texto */
+    border-radius: 30px;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+    z-index: -1;
+    /* detrás del texto */
+}
+
+/* Hover sobre el li que contiene el enlace */
+.process__button:hover .process__contact-us::after {
+    transform: scale(1);
+    /* círculo aparece */
+}
+
+/* Invertimos colores del texto */
+.process__button:hover .process__contact-us {
+    color: var(--color-primary);
+    /* ahora el texto toma el color del fondo original */
+}
+.process__steps {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    /* pasos uno debajo del otro */
+    justify-content: space-between;
+    /* distribución vertical uniforme */
+}
+
+.process__text {
+    color: var(--color-title);
+    font-size: 2rem;
+}
+
+.process__number {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.process__step-title {
+    color: var(--color-title);
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+/*TESTIMONIALS*/
+
+.display__testimonials {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonials__column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.testimonial__item {
+    border-top: 1px solid var(--color-detail);
+    border-bottom: 1px solid var(--color-detail);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 2rem;
+}
+
+.testimonials__author {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.testimonials__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--color-secondary);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial__star {
+    color: orange;
+    font-size: 1rem;
+    border: 1px solid var(--color-secondary);
+}
+
+.testimonial__item {
+    transition: transform 0.4s ease;
+}
+
+.testimonial__item:hover {
+    transform: translateY(-5px);
+}
+
+/*BLOGS*/
+
+.blogs__list {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.blogs__blog {
+    transition: transform 0.4s ease;
+    flex: 1 1 300px;
+    /* Crece y se reduce según el contenedor, ancho mínimo 300px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blogs__blog:hover {
+    transform: translateY(-5px);
+}
+
+.blogs__img {
+    width: 100%;
+    height: 250px;
+    /* Altura uniforme para todas las imágenes */
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.blogs__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Corta o ajusta la imagen para cubrir el contenedor */
+    display: block;
+}
+
+.blogs__info {
+    margin-top: 2rem;
+}
+
+.blogs__title {
+    font-size: 2rem;
+    color: var(--color-text);
+}
+
+.blogs__description {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2rem;
+
+}
+
+.blogs__date,
+.blogs__time {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.2rem;
+
+}
+
+/*FAQs*/
+.layout__faqs {
+    text-align: center;
+    padding: 4rem 2rem;
+
+}
+
+.faqs__container {
+    max-width: 45rem;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.faqs__item {
+    border-bottom: 1px solid var(--color-detail);
+    padding: 2rem 0rem;
+
+}
+
+.faqs__question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: 1.5rem;
+}
+
+.faq__icon {
+    border-radius: 20px;
+    padding: 0.3rem;
+    background-color: var(--color-primary);
+    transition: transform 0.3s ease;
+    font-size: 2rem;
+    color: var(--color-secondary);
+    line-height: 0.6;
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.3);
+    width: 20px;
+    height: 20px;
+
+}
+
+.faqs__item.open .faq__icon {
+    transform: rotate(45deg);
+}
+
+.faqs__answer {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    text-align: left;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--color-description);
+
+
+}
+
+.faqs__item.open .faqs__answer {
+    opacity: 1;
+}
+
+
+.faqs__display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+
+.faqs__qtext {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/*Bakcshape===========================*/
+.backshapes__item {
+    position: absolute;
+    z-index: -1;
+}
+
+.backshapes--shape1 {
+    top: 0;
+    left: 32%;
+}
+
+.backshapes--shape2 {
+    top: 18rem;
+    left: 18%;
+    opacity: 0.5;
+    animation: moveShape3 20s infinite;
+}
+
+.backshapes--shape3 {
+    top: 30%;
+    left: 20%;
+    animation: moveShape4 25s infinite;
+}
+
+.backshapes--shape4 {
+    top: 44%;
+    left: 12%;
+    animation: moveShape3 30s infinite;
+}
+
+.backshapes--shape5 {
+    top: 50%;
+    right: 21%;
+    animation: moveShape4 30s infinite;
+}
+
+.backshapes--shape6 {
+    top: 26%;
+    right: 21%;
+    animation: moveShape5 30s infinite;
+}
+
+.backshapes--shape7 {
+    top: 15%;
+    right: 30%;
+    animation: moveShape3 30s infinite;
+}
+
+/*estilos de footer*/
+.layout__footer {
+    padding-top: 1rem;
+    margin: 3rem 10rem;
+}
+
+.footer__container {
+    max-width: var(--mx-width);
+    margin: 0 auto;
+}
+
+.footer__img {
+    margin: 0 auto;
+    width: 30%;
+    margin-bottom: 2rem;
+}
+
+.footer__real {
+    position: relative;
+    /* Necesario para que el ::before se posicione correctamente */
+    height: 60vh;
+    background-color: var(--color-primary);
+    border-radius: 30px;
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.3);
+    margin-bottom: 5rem;
+    padding: 5rem 10rem;
+    overflow: hidden;
+    /* Para que los puntitos no se salgan */
+}
+
+.footer__real::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /* Solo la mitad inferior */
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 8px 8px, 12px 12px, 20px 20px;
+    background-position: bottom center;
+    background-repeat: repeat;
+
+    /* Gradiente para difuminar hacia arriba */
+    mask-image: linear-gradient(to top, black 0%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+}
+
+
+
+.footer__real__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    backdrop-filter: blur(2px);
+    /* difumina lo que hay DETRÁS */
+    -webkit-backdrop-filter: blur(2px);
+    /* soporte para Safari */
+    color: var(--color-secondary);
+    text-align: center;
+    justify-content: space-evenly;
+    /* espaciado igual a los lados y entre elementos */
+    align-items: center;
+    gap: 0;
+
+
+}
+
+.footer__real__title {
+    font-size: 5rem;
+    font-weight: 500;
+
+
+}
+
+.footer__real__subtitle {
+    color: var(--color-detail);
+
+}
+
+.footer__real__subcontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+.footer__real__button {
+    padding: 1rem;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border-radius: 30px;
+
+}
+
+.footer__top {
+    padding-bottom: 3rem;
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social__img {
+    display: inline-block;
+    color: var(--color-description);
+    font-size: 3rem;
+    padding: 0.5rem;
+    transition: all 300ms ease-in-out;
+}
+
+.social__link:hover>.social__img {
+    color: var(--color-bg-dark);
+}
+
+.footer__main {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__fleft {
+    flex-basis: 50%;
+}
+
+.fleft__container {
+    padding-right: 8rem;
+    margin-right: 4rem;
+    margin-bottom: 8rem;
+}
+
+.fleft__title {
+    display: inline-block;
+    font-size: 6.4rem;
+    line-height: 0.4;
+    font-weight: 500;
+    font-style: italic;
+    color: var(color --color-title);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.fleft__subtitle {
+    font-size: 1.7rem;
+    margin-bottom: 4rem;
+}
+
+.fleft__group {
+    position: relative;
+    background-color: var(color --color-secondary);
+    height: 7.2rem;
+    padding: 1rem;
+
+    border-radius: 20px;
+    box-shadow: 0 24px 40px -15px var(--color-description);
+
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fleft__mail-icon {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.fleft__form-control {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    height: auto;
+    border: none;
+    outline: none;
+    position: relative;
+    flex: 1;
+    color: var(--color-title);
+    margin-left: 1srem;
+
+}
+
+.fleft__btn {
+    height: 5.4rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border-radius: 36px;
+    padding: 1.4rem 3rem;
+    transition: all 300ms ease-in-out;
+}
+
+.fleft__btn:hover {
+    background-color: var(--color-banner);
+}
+
+.footer__fright {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+    margin-right: 2rem;
+}
+
+.footer__widget {
+    margin-bottom: 8rem;
+}
+
+.footer__widget--50 {
+    flex-basis: 40%;
+}
+
+.footer__widget--25 {
+    flex-basis: 25%;
+}
+
+.widget__title {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-banner);
+    margin-bottom: 2rem;
+}
+
+.widget__link {
+    font-size: 1.8rem;
+    padding: 0.8rem 0;
+    display: inline-block;
+    transition: all 300ms linear;
+    color: var(--color-description);
+}
+
+.widget__link:hover {
+    color: var(--color-banner);
+}
+
+.footer__bottom {
+    border-top: 1px solid var(--color-description);
+    display: flex;
+    padding: 0 0;
+    padding-top: 1rem;
+    margin-bottom: 0;
+}
+
+.footer__copyright {
+    flex-basis: 50%;
+}
+
+.copyright__text {
+    display: inline-block;
+    color: var(--color-text-body);
+}
+
+.copyright__text>a {
+    display: inline;
+}
+
+.footer__flinks {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    align-items: left;
+}
+
+.flinks__title {
+    transition: all 300ms ease-in-out;
+}
+
+.flinks__title:hover {
+    color: var(--color-banner);
+
+}
+
+.flinks__item--separator::after {
+    content: "";
+    height: 4px;
+    width: 4px;
+    background-color: var(--color-text-body);
+    border-radius: 50%;
+    position: absolute;
+    top: 53%;
+    right: 5%;
+}
+
+/*ESTILOS BOTON MODO OSCURO*/
+.switcher {
+    position: fixed;
+    top: 20rem;
+    left: 0;
+    background-color: var(--color-primary);
+    border-radius: 0 3rem 3rem 0;
+    padding: 1rem;
+    z-index: 5;
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.switcher__btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: flex;
+
+}
+
+.switcher__icon-light,
+.switcher__icon-dark {
+    color: var(--color-secondary);
+    font-size: 1.8rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 3.6rem;
+}
+
+.switcher__icon-dark {
+    display: none;
+}
+
+/*==============================TITLE==============================*/
+.display__title {
+    margin: 0 auto;
+    width: 500px;
+    flex-basis: 50%;
+}
+
+.title__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem;
+    width: fit-content;
+    margin-inline: auto;
+    color: var(--color-text);
+    border: 0.1px solid var(--color-detail);
+    border-radius: 20px;
+    font-size: 1.1rem;
+    transition: transform 0.4s ease;
+}
+
+.title__container:hover {
+    transform: translateY(-5px);
+}
+
+.subtitle__container,
+.subtitle__subcontainer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.subtitle__text {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--color-title);
+}
+
+.subtitle__subtext {
+    text-align: center;
+}
+
+.subtitle__info {
+    color: var(--color-title);
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}

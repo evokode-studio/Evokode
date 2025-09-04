@@ -120,3 +120,21 @@ body{
 .widget__link:hover{
     color: var(--color-hover-dark);
 }
+/*====================================================pagina de servicios*/
+/* Servicios detalle */
+.layout__services-detail {
+    background-color: var(--color-bg-dark);
+}
+.service-detail__item {
+    background-color: var(--color-borders);
+}
+.service-detail__title {
+    color: var(--color-secondary);
+}
+.service-detail__specialty {
+    color: var(--color-primary);
+}
+.service-detail__description {
+    color: var(--color-text-body);
+}
+

@@ -1,9 +1,7 @@
 /*VARIABLES*/
-
 @media (min-width:1600px) {
   .layout {
     min-width: 1600px;
-
   }
 
   .layout__menu {
@@ -13,25 +11,467 @@
   .layout__banner {
     margin: 0 9.5rem;
     min-height: 85rem;
+  }
+}
 
+@media(max-width: 2400px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 20rem;
+  }
+
+}
+
+@media(max-width: 2300px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 15rem;
+  }
+
+}
+
+@media(max-width: 2200px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 10rem;
+  }
+
+}
+
+@media(max-width: 2100px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 30rem;
+  }
+
+  .home__left-logo-img {
+    width: 25rem;
+    margin-right: 3rem;
+  }
+
+  .left-reviews-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .left-reviews__text {
+    font-size: 1.2rem;
+  }
+
+  .left-info__title {
+    font-size: 7rem;
+    margin-top: 5rem;
+  }
+
+  .left-info__subtitle {
+    margin-top: 2rem;
+    font-size: 2.3rem;
+  }
+
+  .left-info__buttons {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .left-info__ratings {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .home__ratings-i {
+    font-size: 3.5rem;
+    margin: 1.2rem;
+  }
+
+  .left-info__rating-title {
+    font-size: 2.5rem;
+  }
+
+  .left-info__rating-subtitle {
+    font-size: 2rem;
+  }
+
+  .home__right__img {
+    height: 550px;
+  }
+
+  .home__right__name {
+    font-size: 3rem;
+  }
+
+  .home__right__title {
+    font-size: 2rem;
+  }
+
+  .about__text {
+    font-size: 4.5rem;
+  }
+
+  .space4__arrow {
+    margin-bottom: 1.5rem;
+    font-size: 4rem;
+  }
+
+  .space4__number {
+    font-size: 5rem;
+  }
+
+  .services__item1,
+  .services__item2,
+  .services__item3,
+  .services__item4,
+  .services__item5,
+  .services__item6 {
+    height: 50rem;
+  }
+
+  .process__text {
+    font-size: 2.8rem;
+  }
+
+  .process__description {
+    font-size: 1.8rem;
+  }
+
+  .process__icon {
+    width: 70px;
+    height: 70px;
+    font-size: 3.5rem;
+  }
+
+  .process__step-title {
+    font-size: 3.5rem;
+  }
+
+  .process__step-subtitle {
+    font-size: 2rem;
+  }
+
+  .blogs__img {
+    height: 35rem;
+  }
+
+  .blogs__title {
+    font-size: 3rem;
+  }
+
+  .blogs__date,
+  .blogs__time {
+    font-size: 1.5rem;
+  }
+
+  .footer__real__title {
+    font-size: 4rem;
+  }
+
+  .footer__real__subtitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media(max-width: 2000px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 20rem;
+  }
+}
+
+@media(max-width: 1800px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 10rem;
+  }
+}
+
+@media(max-width: 1700px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 30rem;
+  }
+
+  .home__display {
+    gap: 1rem;
+  }
+
+  .home__left-logo-img {
+    width: 20rem;
+    margin-right: 1rem;
+  }
+
+  .left-info__title {
+    font-size: 5.8rem;
+    margin-top: 4rem;
+  }
+
+  .left-info__buttons {
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .left-info__ratings {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .left-info__rating-title {
+    font-size: 2.3rem;
+  }
+
+  .left-info__rating-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .home__ratings-i {
+    font-size: 3.2rem;
+    margin: 0.8rem;
+  }
+
+  .left-info__ratings {
+    gap: 0rem;
+  }
+
+  .home__right__img {
+    height: 500px;
+  }
+
+  .about__text {
+    padding-right: 1rem;
+    font-size: 3.5rem;
+  }
+
+  .about_grid {
+    gap: 2rem;
+  }
+
+  .space4__arrow {
+    margin-bottom: 1.2rem;
+    font-size: 2.5rem;
+  }
+
+  .space4__number {
+    font-size: 4rem;
+  }
+
+  .space4__text {
+    font-size: 1.6rem;
+  }
+
+  .benefits__logos {
+    width: 50px;
+    height: 50px;
+  }
+
+  .benefits__logo {
+    font-size: 2rem;
+  }
+
+  .benefits__title {
+    margin-top: 3rem;
+    font-size: 2.7rem;
+  }
+
+  .benefits__subtitle {
+    font-size: 1.8rem;
+  }
+
+  .benefits__logo-small {
+    width: 50px;
+    height: 50px;
+  }
+
+  .benefits__logo-small i {
+    font-size: 1.8rem;
+  }
+
+  .benefits__item-title {
+    margin-top: 3rem;
+    font-size: 3.5rem;
+  }
+
+  .benefits__item-text {
+    font-size: 1.8rem;
+  }
+
+  .benefits__item1,
+  .benefits__item2,
+  .benefits__item3,
+  .benefits__item4,
+  .benefits__item5 {
+    padding: 2rem;
+  }
+
+  .services__item1,
+  .services__item2,
+  .services__item3,
+  .services__item4,
+  .services__item5,
+  .services__item6 {
+    height: 40rem;
+  }
+
+  .vision__display {
+    flex-direction: column;
+  }
+
+  .vision__image {
+    max-width: 80%;
+  }
+
+  .process__icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5rem;
+  }
+
+  .process__text {
+    font-size: 2.2rem;
+  }
+
+  .process__description {
+    font-size: 1.5rem;
+  }
+
+  .process__grid {
+    gap: 2.5rem 2.5rem;
+    margin: 5rem 0rem 8rem 0rem;
+  }
+
+  .process__item1,
+  .process__item2,
+  .process__item3,
+  .process__item4,
+  .process__item5,
+  .process__item6,
+  .process__item7,
+  .process__item8,
+  .process__item9 {
+    gap: 1rem;
+  }
+
+  .process__contact-us {
+    font-size: 1.8rem;
+  }
+
+  .process__step-title {
+    font-size: 3rem;
+  }
+
+  .process__step-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .testimonials__author {
+    gap: 1rem;
+  }
+
+  .testimonials__name {
+    font-size: 2rem;
+  }
+
+  .testimonials__type {
+    font-size: 1.7rem;
+  }
+
+  .testimonials__testimonials {
+    font-size: 1.8rem;
+  }
+
+  .blogs__title {
+    font-size: 2.4rem;
+  }
+
+  .blogs__description {
+    margin-top: 1rem;
   }
 
 
 }
 
-@media (min-width:1199px) and (max-width:1400px) {
+@media(max-width: 1600px) {
 
-  /*.projects__grid,
-  .stats__container,
-  .contact__container,*/
-  .reviews__grid,
-  .clients__container,
-  .news__container,
-  .footer__container {
-    max-width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 20rem;
+  }
+}
 
+@media(max-width: 1500px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 10rem;
   }
 }
 
@@ -44,29 +484,306 @@
     margin: 0 2rem;
   }
 
-  .layout__home, 
-  .layout__about,
-  .layout__benefits, 
-  .layout__services,
-  .layout__vision, 
-  .layout__process, 
-  .layout__testimonials, 
-  .layout__blogs{
-    padding: 7rem 5rem;
-}
-  /*.projects__grid,
-  .stats__container,
-  .contact__container,*/
-  .reviews__grid,
-  .clients__container,
-  .news__container,
-  .footer__container {
-    max-width: 96rem;
+  .footer__real {
+    padding: 2.5rem 5rem;
+    margin-bottom: 2.5rem;
   }
 
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 5rem;
+  }
+
+
+}
+
+@media(max-width: 1100px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 20rem;
+  }
+
+  .home__display {
+    flex-direction: column;
+    align-items: center;
+    /* centra los hijos */
+  }
+
+  .home__left,
+  .home__right {
+    flex-basis: 100%;
+    /* que ocupen todo el ancho */
+    width: 100%;
+  }
+
+  .home__right {
+    margin-top: 4rem;
+    /* separa del bloque de arriba */
+  }
+
+  .home__right__img {
+    position: relative;
+    /* quita absolute */
+    left: auto;
+    transform: none;
+    height: auto;
+    width: 100%;
+    /* ahora ocupa ancho completo */
+    max-height: 450px;
+    /* evita que crezca demasiado */
+    object-fit: contain;
+    /* mantiene proporción */
+  }
+
+  .about_grid {
+    grid-template-columns: 1fr;
+    /* solo una columna */
+    grid-template-rows: auto;
+    /* las filas se adaptan */
+  }
+
+  /* cada espacio ocupa 100% y se apila */
+  .about__space1,
+  .about__space2,
+  .about__space3,
+  .about__space4 {
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 2rem;
+    /* un poco de separación entre bloques */
+  }
+
+  /* ajustes de tipografía y paddings */
+  .about__text {
+    font-size: 3rem;
+    /* más legible en pantallas pequeñas */
+    padding-right: 0;
+  }
+
+  .space4__number {
+    font-size: 4rem;
+  }
+
+  .space4__text {
+    font-size: 1.6rem;
+  }
+
+  /* imágenes adaptables */
+  .about__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .benefits__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* SOLO 2 columnas */
+    grid-template-rows: auto auto auto;
+    /* 3 filas */
+    gap: 20px;
+  }
+
+
+  /* posiciones personalizadas */
+  .benefits__item1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .benefits__item2 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .benefits__item5 {
+    grid-row: 2;
+    grid-column: 1 / 3;
+    /* abarca desde la col 1 hasta ANTES de la 3 */
+  }
+
+
+  .benefits__item3 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .benefits__item4 {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  /* === FIX: BENEFITS en 2 columnas, 3 filas, sin columna fantasma === */
+  .benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* SOLO 2 columnas */
+    grid-template-areas:
+      "item1 item2"
+      "item5 item5"
+      "item3 item4";
+    gap: 2rem;
+  }
+
+  /* (Opcional pero útil) reset de colocación por si quedan reglas viejas más arriba */
+  .benefits__grid>* {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  /* Mapeo explícito de cada item */
+  .benefits__item1 {
+    grid-area: item1;
+  }
+
+  .benefits__item2 {
+    grid-area: item2;
+  }
+
+  .benefits__item5 {
+    grid-area: item5;
+  }
+
+  /* ocupa fila 2 completa */
+  .benefits__item3 {
+    grid-area: item3;
+  }
+
+  .benefits__item4 {
+    grid-area: item4;
+  }
+
+  .benefits__item5 .benefits__img {
+    max-width: 40%;
+  }
+
+  .services__item1,
+  .services__item2,
+  .services__item3,
+  .services__item4,
+  .services__item5,
+  .services__item6 {
+    height: 35rem;
+    font-size: 1.5rem;
+  }
+
+  .process__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas iguales */
+    gap: 5rem 5rem;
+    /* espacio entre items */
+    margin: 5rem 0rem 5rem 0rem;
+  }
+
+  /* El último item ocupará las dos columnas */
+  .process__item9 {
+    grid-column: 1 / -1;
+    /* se extiende desde la columna 1 hasta la última */
+    justify-self: center;
+  }
+
+  .process__type {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .display__testimonials {
+    display: flex;
+    /* ya debería estar así */
+    justify-content: space-between;
+  }
+
+  .column3 {
+    display: none;
+    /* ocultamos la columna 3 */
+  }
+
+  .column1,
+  .column2 {
+    width: 45%;
+    /* ajustar ancho para que quepan centradas */
+  }
+
+  .display__testimonials {
+    justify-content: center;
+    /* centramos las dos columnas */
+  }
+
+  .testimonials__show {
+    display: block;
+
+  }
+
+  .blogs__list {
+    display: flex;
+    flex-direction: column;
+    /* ahora se apilan en columna */
+    gap: 4rem;
+    /* aumenta un poco el espacio entre blogs si quieres */
+    margin-top: 3rem;
+  }
+
+  .article__container {
+    display: flex;
+  }
+
+  .article__aside {
+    position: sticky;
+    right: 0;
+    /* o left:0 si prefieres */
+    top: 80px;
+    /* según tu header */
+    width: 150px;
+    height: calc(100vh - 80px);
+    background: transparent;
+    padding: 1rem;
+  }
+
+
+
+  .subtitle__info {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+
+  .subtitle__text {
+    font-size: 5rem;
+  }
+.service-detail__item {
+    width:  700px;
+}
 }
 
 @media(max-width: 1000px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 10rem;
+  }
+
   .navbar__mobile-btn {
     display: block;
   }
@@ -80,58 +797,50 @@
   }
 
   .layout__banner {
-    min-height: 60rem; /* mantener altura mínima */
+    min-height: 60rem;
+    /* mantener altura mínima */
     margin: 0 2rem;
     padding-top: 5rem;
     padding-bottom: 7rem;
 
   }
-  .banner__image{
+
+  .banner__image {
     max-width: 60%;
   }
 
-  .home_display,
-  .about_grid,
-  .news__container,
-  .footer__container {
-    max-width: 72rem;
+  .article__container {
+    max-width: 600px;
   }
 
-  .services__subtitle,
-  .projects__subtitle,
-  .stats__subtitle,
-  .reviews__subtitle,
-  .clients__subtitle,
-  .news__subtitle,
-  .contact__subtitle {
-    font-size: 1.8rem;
+  .article__content {
+    max-width: 500px;
+    line-height: 1.7;
+    font-size: 1.5rem;
   }
 
-  .services__title,
-  .projects__title,
-  .stats__title,
-  .reviews__title,
-  .clients__title,
-  .news__title,
-  .contact__title {
-    font-size: 5rem;
+  .article__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
 
-
-  .layout__services {
-    padding-bottom: 5rem;
+  .article__intro {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
 
-  .layout__projects {
-    padding: 8rem 4rem;
+  .article__hero-img {
+    max-height: 20rem;
   }
 
-
-  .layout__contact {
-    padding-top: 8rem;
-    padding-bottom: 4rem;
+  .article__gallery {
+    display: flex;
+    flex-direction: row;
   }
 
+  .article__img {
+    max-width: 15rem;
+  }
 
   .footer__main {
     flex-direction: column;
@@ -171,7 +880,387 @@
   }
 }
 
+@media(max-width: 900px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 5rem;
+  }
+
+  .faqs__container {
+    max-width: 50rem;
+  }
+
+  .footer__real__title {
+    font-size: 3.5rem;
+  }
+
+  .footer__real__subtitle {
+    font-size: 2rem;
+  }
+
+  .footer__real__button {
+    font-size: 1.8rem;
+  }
+
+  .faqs__question {
+    font-size: 2rem;
+  }
+
+  .faqs__answer {
+    font-size: 1.8rem;
+  }
+
+    .service-detail__item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-detail__img-container,
+    .service-detail__info {
+        flex: unset;
+        width: 100%;
+    }
+}
+
+@media(max-width: 800px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 15rem;
+  }
+
+  .layout__banner {
+    height: 80vh;
+  }
+
+  .home__left-reviews {
+    display: flex;
+    flex-direction: column;
+    /* primero logo arriba */
+    gap: 1.5rem;
+    align-items: stretch;
+    /* que los hijos ocupen todo el ancho disponible */
+  }
+
+  /* Logo encima, centrado o a la izquierda */
+  .home__left-logo-img {
+    width: 20rem;
+    /* o ajusta al tamaño que quieras */
+    margin: 0 auto 1rem;
+    /* centrado horizontal con margen abajo */
+  }
+
+  /* Contenedor que envuelve círculos y rating */
+  .home__reviews-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* círculos a la izquierda, rating a la derecha */
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Los círculos */
+  .left-reviews__circles {
+    margin: 0;
+  }
+
+  /* Rating alineado a la derecha */
+  .left-reviews__rate {
+    text-align: right;
+  }
+
+  .left-info__title {
+    font-size: 4.6rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .left-info__subtitle {
+    margin-top: 2rem;
+    margin-right: 0;
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .left-info__buttons {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .left-info__ratings {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+  }
+
+  .left-info__rating-title {
+    font-size: 2rem;
+  }
+
+  .left-info__rating-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .home__right__name {
+    font-size: 2.5rem;
+  }
+
+  .home__right__title {
+    font-size: 1.8rem;
+  }
+
+  .button__go {
+    height: 40px;
+    width: 40px;
+  }
+
+  .button__go__i {
+    font-size: 1.5rem;
+  }
+
+  .about__space4__display {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas */
+    grid-template-rows: repeat(3, auto);
+    /* 3 filas */
+    gap: 3rem;
+  }
+
+  .space4__text {
+    line-height: 1;
+  }
+
+  .space4__arrow {
+    margin-bottom: .5rem;
+    font-size: 2rem;
+  }
+
+  .display__title {
+    width: 360px;
+    flex-basis: 100%;
+  }
+
+  .subtitle__text {
+    font-size: 4.5rem;
+  }
+
+  .benefits__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* una columna */
+    grid-template-areas:
+      "item1"
+      "item2"
+      "item5"
+      "item5"
+      "item3"
+      "item4";
+    gap: 2rem;
+    /* separacion entre filas */
+  }
+
+  /* Asignamos cada item a su área */
+  .benefits__item1 {
+    grid-area: item1;
+  }
+
+  .benefits__item2 {
+    grid-area: item2;
+  }
+
+  .benefits__item5 {
+    grid-area: item5;
+  }
+
+  .benefits__item3 {
+    grid-area: item3;
+  }
+
+  .benefits__item4 {
+    grid-area: item4;
+  }
+
+  /* Opcional: ajustamos la imagen del item5 para que no ocupe demasiado */
+  .benefits__item5 .benefits__img {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas */
+    grid-template-rows: repeat(3, auto);
+    /* 3 filas */
+    gap: 1rem;
+    margin-top: 4rem;
+  }
+
+  /* Opcional: reset por si queda alguna regla previa molestando */
+  .services__grid>* {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  /* Posiciones exactas */
+  .services__item1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .services__item2 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .services__item3 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .services__item4 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .services__item5 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .services__item6 {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  .services__item1,
+  .services__item2,
+  .services__item3,
+  .services__item4,
+  .services__item5,
+  .services__item6 {
+    height: 30rem;
+  }
+
+  .vision__image {
+    max-width: 100%;
+  }
+
+  .process__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* solo 1 columna */
+    grid-auto-rows: auto;
+    /* las filas se adaptan */
+    gap: 2rem;
+    /* espacio entre items */
+    margin: 5rem 0;
+  }
+
+  /* reset de posiciones manuales */
+  .process__grid>* {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    justify-self: stretch;
+    /* los hace ocupar todo el ancho */
+  }
+
+  .process__contact {
+    padding: 1rem;
+    width: 200px;
+  }
+
+  .process__title {
+    font-size: 1.2rem;
+  }
+
+  .process__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .process__button {
+    margin-top: 1rem;
+  }
+
+  .process__contact-us {
+    font-size: 1.2rem;
+  }
+
+  .column3,
+  .column2 {
+    display: none;
+  }
+
+  .column1 {
+    width: 100%;
+  }
+
+  .blogs__list {
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .blogs__img {
+    height: 20rem;
+  }
+
+  .blogs__info {
+    margin-top: 1rem;
+  }
+
+
+
+}
+
 @media(max-width: 770px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 8rem 10rem;
+  }
+
+  .home__left-info {
+    text-align: center;
+  }
+
+  .left-info__buttons {
+    display: inline-flex;
+    gap: 2rem;
+    margin: 2rem 0 4rem;
+    vertical-align: middle;
+  }
+
+  .left-info__ratings {
+    display: inline-flex;
+    gap: 2rem;
+    margin: 1rem 0 4rem;
+    vertical-align: middle;
+  }
+
   .layout__banner {
     padding: 8rem 3rem;
     margin: 0 3rem;
@@ -181,43 +1270,21 @@
     font-size: 4rem;
   }
 
-  .layout__services {
-
-    margin: 7rem 7rem;
+  .process__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* una sola columna */
+    grid-auto-rows: auto;
+    /* cada fila se adapta al contenido */
+    gap: 2rem;
+    /* separación entre items */
+    margin: 5rem 5rem 5rem 5rem;
   }
 
-  /*.projects__grid,
-  .stats__container,
-  .contact__container,*/
-  .reviews__grid,
-  .clients__container,
-  .news__container,
-  .footer__container {
-    max-width: 53rem;
-  }
-
-  .services__subtitle,
-  .projects__subtitle,
-  .stats__subtitle,
-  .reviews__subtitle,
-  .clients__subtitle,
-  .news__subtitle,
-  .contact__subtitle {
-    font-size: 1.5rem;
-  }
-
-  .services__title,
-  .projects__title,
-  .stats__title,
-  .reviews__title,
-  .clients__title,
-  .news__title,
-  .contact__title {
-    font-size: 5rem;
-  }
-
-  .layout__projects {
-    padding: 6rem 4rem;
+  .process__grid>* {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    justify-self: stretch;
   }
 
   .fleft__container {
@@ -225,29 +1292,51 @@
     margin-right: 0;
   }
 
+  .popup-content {
+    flex-direction: column;
+    height: auto;
+  }
 
+  .popup-left,
+  .popup-right {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .emergency-btn {
+    width: 70px;
+    height: 70px;
+  }
+
+  .phone-icon {
+    width: 30px;
+    height: 30px;
+  }
+.service-detail__item {
+    width:  500px;
+}
+}
+
+@media(max-width: 670px) {
+
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 5rem 2rem;
+  }
 
 }
 
 @media(max-width: 640px) {
 
-  .banner__image{
+  .banner__image {
     max-width: 70%;
-  }
-  .layout__projects,
-  .stats__container,
-  .contact__container,
-  .reviews__grid,
-  .clients__container,
-  .news__container {
-    padding-left: 3rem;
-    padding-right: 3rem;
-
-  }
-
-  .layout__services {
-    margin-left: 3rem;
-    margin-right: 1rem;
   }
 
   .footer__container {
@@ -277,10 +1366,121 @@
 
 }
 
+@media(max-width: 550px) {
+  .layout__article {
+    padding: 0rem;
+  }
+
+  .article__container {
+    max-width: 350px;
+  }
+
+  .article__content {
+    max-width: 300px;
+    line-height: 1.7;
+    font-size: 1.2rem;
+  }
+
+  .article__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .article__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .article__intro {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .article__hero-img {
+    max-width: 30rem;
+  }
+
+  .article__gallery {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article__img {
+    max-width: 20rem;
+  }
+
+  .aside__link {
+    font-size: 1.2rem;
+  }
+
+  .article__aside {
+    width: 30px;
+    padding: 0.5rem;
+  }
+  .service-detail__item {
+    width:  400px;
+}
+}
+
 @media(max-width: 500px) {
 
-  .layout__banner{
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 5rem 5rem;
+  }
+
+  .layout__banner {
     min-height: 45rem;
+  }
+
+  .left-reviews-img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .left-reviews__text {
+    font-size: .9rem;
+  }
+
+  .home__stars {
+    font-size: 1.2rem;
+  }
+
+  .left-info__subtitle {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .left-info__title {
+    font-size: 4rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .left-info__buttons {
+    gap: 1rem;
+    margin: 2rem 0 2rem;
+    font-size: 1.5rem;
+  }
+
+  .left-info__button1 {
+    padding: 0.8rem;
+
+  }
+
+  .left-info__ratings {
+    gap: 1rem;
+    margin: 1rem 0 1rem;
+  }
+
+  .left-info__rating {
+    gap: 0.5rem;
   }
 
   .fleft__btn {
@@ -291,8 +1491,275 @@
     transition: all 300ms ease-in-out;
   }
 
+  .home__ratings-i {
+    font-size: 2.5rem;
+    margin: 0.5rem;
+  }
+
+  .left-info__rating-title {
+    font-size: 1.8rem;
+  }
+
+  .left-info__rating-subtitle {
+    font-size: 1rem;
+  }
+
+  .home__right {
+    margin-top: 1rem;
+  }
+
+  .home__right__container {
+    padding: 1rem;
+  }
+
+  .home__right__name {
+    font-size: 2rem;
+  }
+
+  .home__right__title {
+    font-size: 1.4rem;
+  }
+
+  .title__container {
+    font-size: 1.1rem;
+  }
+
+  .display__title {
+    width: 250px;
+  }
+
+  .subtitle__text {
+    font-size: 3rem;
+  }
+
+  .about__text {
+    font-size: 2.4rem;
+  }
+
+  .about__space4__display {
+    gap: 1.5rem;
+  }
+
+  .space4__number {
+    font-size: 3.2rem;
+  }
+
+  .space4__text {
+    font-size: 1.3rem;
+  }
+
+  .benefits__logos {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 2px 5px rgb(3, 117, 79);
+    border: 1px solid var(--color-secondary);
+  }
+
+  .benefits__logo {
+    font-size: 1.5rem;
+  }
+
+  .benefits__title {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .benefits__subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .benefits__item1,
+  .benefits__item2,
+  .benefits__item3,
+  .benefits__item4,
+  .benefits__item5 {
+    padding: 1.5rem;
+  }
+
+  .benefits__logo-small {
+    width: 40px;
+    height: 40px;
+  }
+
+  .benefits__logo-small i {
+    font-size: 1.2rem;
+  }
+
+  .benefits__item-title {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .benefits__item-text {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .subtitle__subtext {
+    font-size: 1rem;
+  }
+
+  .services__grid {
+    margin-top: 2rem;
+  }
+
+  .services__item1,
+  .services__item2,
+  .services__item3,
+  .services__item4,
+  .services__item5,
+  .services__item6 {
+    height: 25rem;
+  }
+
+  .services__info {
+    padding: 0.5rem;
+    gap: 5px;
+  }
+
+  .services__item1,
+  .services__item2,
+  .services__item3,
+  .services__item4,
+  .services__item5,
+  .services__item6 {
+    font-size: 1.2rem;
+  }
+
+  .services__arrow {
+    padding: 0.5rem;
+  }
+
+  .subtitle__info {
+    font-size: 1.2rem;
+  }
+
+  .button__contact-vision {
+    margin-top: 1rem;
+    margin: 0rem auto 0 auto;
+  }
+
+  .button__contact-v {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .process__grid {
+    gap: 2rem;
+    margin: 5rem 0rem 0rem 0rem;
+  }
+
+  .process__icon {
+    width: 50px;
+    height: 50px;
+    font-size: 2.2rem;
+  }
+
+  .process__text {
+    font-size: 1.8rem;
+  }
+
+  .process__description {
+    font-size: 1.1rem;
+  }
+
+  .process__title {
+    font-size: 1.1rem;
+  }
+
+  .process__subtitle {
+    font-size: 1rem;
+  }
+
+  .process__contact-us {
+    font-size: 1rem;
+  }
+
+  .process__number {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .process__step-title {
+    font-size: 2.2rem;
+  }
+
+  .process__step-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .testimonials__author {
+    gap: 0.5rem;
+  }
+
+  .testimonials__name {
+    font-size: 1.5rem;
+  }
+
+  .testimonials__type {
+    font-size: 1.2rem;
+  }
+
+  .testimonial__star {
+    font-size: 0.8rem;
+  }
+
+  .testimonials__testimonials {
+    font-size: 1.5rem;
+  }
+
+  .blogs__description {
+    margin-top: 0.5rem;
+  }
+
+  .blogs__title {
+    font-size: 2rem;
+  }
+
+  .blogs__date,
+  .blogs__time {
+    font-size: 1rem;
+  }
+
+  .faqs__container {
+    max-width: 30rem;
+  }
+
+  .faqs__question {
+    font-size: 1.8rem;
+  }
+
+  .faq__icon {
+    font-size: 2rem;
+    width: 25px;
+    height: 25px;
+  }
+
+  .faqs__answer {
+    font-size: 1.3rem;
+  }
+
   .layout__footer {
     margin: 1rem 1rem;
+  }
+
+  .footer__real {
+    height: 40vh;
+    padding: 2rem 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer__real__title {
+    font-size: 2.5rem;
+  }
+
+  .footer__real__subtitle {
+    font-size: 1.7rem;
+  }
+
+  .footer__real__button {
+    font-size: 1.2rem;
   }
 
   .fleft__title {
@@ -316,20 +1783,22 @@
 
 }
 
-@media(max-width: 400px) {
+@media(max-width: 450px) {
 
-  .services__title,
-  .projects__title,
-  .stats__title,
-  .reviews__title,
-  .clients__title,
-  .news__title,
-  .contact__title {
-    font-size: 3.5rem;
+  .layout__home,
+  .layout__about,
+  .layout__benefits,
+  .layout__services,
+  .layout__vision,
+  .layout__process,
+  .layout__testimonials,
+  .layout__blogs {
+    width: 100%;
+    padding: 5rem 2rem;
   }
+}
 
-
-
+@media(max-width: 400px) {
   .fleft__form-control {
     font-size: 1.5rem;
     margin: 0rem;
@@ -345,9 +1814,21 @@
 
   }
 
+  .footer__real__title {
+    font-size: 2rem;
+  }
+
+  .footer__real__subtitle {
+    font-size: 1.4rem;
+  }
+
+  .footer__real__button {
+    font-size: 1rem;
+  }
+.service-detail__item {
+    width:  320px;
 }
-
-
+}
 
 
 /*NAVEGACION RESPONSIVE*/
@@ -411,18 +1892,20 @@
   background-color: transparent;
   height: 3rem;
   width: 3rem;
-  border: 2px solid var(--color-borders);
+  border: none;
   border-radius: 1rem;
   align-items: center;
   justify-content: center;
   color: var(--color-borders);
-  
+
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
-.menu-mobile__close i{
+
+.menu-mobile__close i {
   font-size: 2rem;
 }
+
 .menu-mobile__close:hover {
   background-color: var(--color-borders);
   color: var(--color-secondary);
@@ -480,42 +1963,48 @@
 .submenu-mobile__title {
   color: var(--color-text-body);
 }
-.menu-mobile__idioms{
+
+.menu-mobile__idioms {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 
 }
-.menu-mobile__idiom{
+
+.menu-mobile__idiom {
   color: var(--color-description);
   transition: all 300ms ease-in-out;
 }
-.menu-mobile__idiom:hover{
+
+.menu-mobile__idiom:hover {
   color: var(--color-banner);
 }
+
 .menu-mobile__item-contact {
-    border: 1px solid var(--color-banner);
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 1rem;
+  border: 1px solid var(--color-banner);
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 .menu-mobile__title {
-    font-weight: thin;
+  font-weight: thin;
 }
 
 .menu-mobile__title-contact {
-    color: var(--color-banner);
-    font-weight: thin;
+  color: var(--color-banner);
+  font-weight: thin;
 }
-.menu-mobile__div{
+
+.menu-mobile__div {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.menu-mobile-icon{
+
+.menu-mobile-icon {
   font-size: 3rem;
   color: var(--color-banner);
 

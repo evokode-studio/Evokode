@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta para configurar el viewport y que sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Cargar Fuentes-->
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/dmsans/dmsans.css">
+    <!--Cargar Estilos-->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!--<link rel="stylesheet" href="./assets/css/dark.css">-->
+    <!--Cargar JS-->
+    <script src="./assets/js/menu-mobile.js"></script>
+    <script src="./assets/js/navbar-fixed.js"></script>
+    <script src="./assets/js/dark.js"></script>
+    <script src="./assets/js/home-scroll.js"></script>
+    <script src="./assets/js/ALL-Scroll.js" defer></script>
+    <script src="./assets/js/about-benefits-scroll.js" defer></script>
+    <script src="./assets/js/faqs.js"></script>
+    <script src="./assets/js/popup.js" defer></script>
+    <script src="./assets/js/article.js" defer></script>
+    <!-- Título único y descriptivo -->
+    <title>Agencia de Desarrollo Web | Erik Vigil</title>
+
+    <!-- Meta descripción para motores de búsqueda -->
+    <meta name="description" content="Soluciones profesionales para Diseño y Desarrollo Web por Erik Vigil">
+    <!-- Palabras clave (menos usadas hoy, pero pueden ayudar) -->
+    <meta name="keywords" content="Diseño, Vigil, Desarrollo">
+
+    <!-- Autor -->
+    <meta name="author" content="Erik Vigil López">
+
+    <!-- Enlace al favicon -->
+    <link rel="icon" href="./assets/img/MEDICALL/MEDICALL_white -logo.png" type="image/x-icon">
+
+    <!-- Etiquetas sociales para mejorar la apariencia al compartir en redes -->
+    <meta property="og:title" content="Develop Erik Vigil">
+    <meta property="og:description" content="Realizamos diseños profesionales, potentes y precisos">
+    <meta property="og:image" content="https://evokode-studio.github.io/Develop/assets/img/logo1.png">
+    <meta property="og:url" content="https://evokode-studio.github.io/Develop/">
+    <meta property="og:type" content="website">
+
+    <!--Twitter Cards-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Develop Erik Vigil">
+    <meta name="twitter:description" content="Realizamos diseños profesionales, potentes y precisos">
+    <meta name="twitter:image" content="https://evokode-studio.github.io/Develop/assets/img/logo1.png">
+
+
+</head>
+
+<body>
+    <!--Boton Modo Oscuro-->
+    <div class="switcher">
+        <button class="switcher__btn">
+            <span class="switcher__icon-light">
+                <i class="fa-solid fa-moon switcher__icon"></i>
+            </span>
+            <span class="switcher__icon-dark">
+                <i class="fa-solid fa-lightbulb switcher__icon"></i>
+            </span>
+
+        </button>
+
+    </div>
+    <!--MENU NAVEGACION RESPONSIVE -->
+    <div class="menu-mobile">
+        <div class="menu-mobile__header">
+            <div class="menu-mobile__container-logo">
+                <a class="menu-mobile__link-logo" href="./index.html">
+                    <img src="./assets/img/MEDICALL/MEDICALLname-nobg.png" alt="logodelsitio"
+                        class="menu-mobile__logo-light">
+                    <img src="./assets/img/MEDICALL/MEDICALL_white - name.png" alt="logodelsitio"
+                        class="menu-mobile__logo-dark">
+                </a>
+                <button class="menu-mobile__close">
+                    <i class="menu-mobile__icon fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="menu-mobile__idioms">
+                <a href="#" class="menu-mobile__idiom">English</a>
+                <a href="#" class="menu-mobile__idiom">Español</a>
+            </div>
+
+
+        </div>
+        <div class="menu-mobile__body">
+            <nav class="menu-mobile__nav">
+                <ul class="menu-mobile__list">
+                    <li class="menu-mobile__item">
+                        <a href="./index.html" class="menu-mobile__title">HOME</a>
+                    </li>
+                    <li class="menu-mobile__item">
+                        <a href="#services" class="menu-mobile__title">
+                            Servicios
+                            <i class="fa-solid fa-chevron-down menu-mobile__icon"></i>
+                        </a>
+                        <ul class="menu-mobile__submenu">
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#consulta" class="submenu-mobile__title">Consulta</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#cardiologia" class="submenu-mobile__title">Cardiologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#neurologia" class="submenu-mobile__title">Neurologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a hhref="./services.html#pediatria" class="submenu-mobile__title">Pediatria</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#traumatologia" class="submenu-mobile__title">Traumatologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#urologia" class="submenu-mobile__title">Urologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#ginecologia" class="submenu-mobile__title">Ginecologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#geriatria" class="submenu-mobile__title">Geriatria</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#traumatologia" class="submenu-mobile__title">Traumatologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#oncologia" class="submenu-mobile__title">Oncologia</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="menu-mobile__item">
+                        <a href="#" class="menu-mobile__title">
+                            Equipo
+                            <i class="fa-solid fa-chevron-down menu-mobile__icon"></i>
+                        </a>
+                        <ul class="menu-mobile__submenu">
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#consulta" class="submenu-mobile__title">Consulta</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#cardiologia" class="submenu-mobile__title">Cardiologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#neurologia" class="submenu-mobile__title">Neurologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a hhref="./services.html#pediatria" class="submenu-mobile__title">Pediatria</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#traumatologia" class="submenu-mobile__title">Traumatologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#urologia" class="submenu-mobile__title">Urologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#ginecologia" class="submenu-mobile__title">Ginecologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#geriatria" class="submenu-mobile__title">Geriatria</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#traumatologia" class="submenu-mobile__title">Traumatologia</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="./services.html#oncologia" class="submenu-mobile__title">Oncologia</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="menu-mobile__item">
+                        <a href="./index.html#blog" class="menu-mobile__title">Blog</a>
+                    </li>
+
+                </ul>
+            </nav>
+            </nav>
+        </div>
+        <div class="menu-mobile__bottom">
+            <div class="menu-mobile__div">
+                <a href="#" class="menu-mobile-icon"><i class="fa-brands fa-whatsapp menu-mobile-i"></i></a>
+                <a href="#" class="menu-mobile-icon"><i class="fa-brands fa-facebook menu-mobile-i"></i></a>
+                <a href="#" class="menu-mobile-icon"><i class="fa-brands fa-instagram menu-mobile-i"></i></a>
+            </div>
+            <div class="menu-mobile__item-contact">
+                <a href="#contact" class="menu-mobile__title-contact open-popup-btn">Contactanos</a>
+            </div>
+        </div>
+    </div>
+    <!-- POPUP CONSULTORIO -->
+    <div id="popup" class="popup-overlay hidden">
+        <div class="popup-content">
+
+            <!-- SECCIÓN IZQUIERDA: EMERGENCIA -->
+            <div class="popup-left">
+                <h2>¿Necesitas una ambulancia?</h2>
+                <p>En caso de emergencia, llama de inmediato para recibir atención rápida.</p>
+                <a href="tel:+521XXXXXXXXXX" class="emergency-btn">
+                    <!-- Ícono de teléfono grande -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="phone-icon" viewBox="0 0 24 24" fill="currentColor"
+                        width="60" height="60">
+                        <path
+                            d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.74 3.83.74a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22.5 1.5 13.93 1.5 3a1 1 0 011-1H6a1 1 0 011 1c0 1.33.26 2.63.74 3.83a1 1 0 01-.21 1.11l-2.91 2.85z" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- SECCIÓN DERECHA: AGENDAR CITA -->
+            <div class="popup-right">
+
+                <h1>Ó</h1>
+                <h2>Agendar una cita</h2>
+                <form id="appointment-form">
+                    <!-- Pregunta 1: Especialidad -->
+                    <label for="specialty">¿Qué necesitas?</label>
+                    <select id="specialty" required>
+                        <option value="">Selecciona una especialidad</option>
+                        <option value="Cardiología">Cardiología</option>
+                        <option value="Urología">Urología</option>
+                        <option value="Pediatría">Pediatría</option>
+                        <option value="Medicina General">Medicina General</option>
+                        <option value="Dermatología">Dermatología</option>
+                    </select>
+
+                    <!-- Pregunta 2: Horario -->
+                    <label for="time">¿Qué horario te acomoda mejor?</label>
+                    <select id="time" required>
+                        <option value="">Selecciona un horario</option>
+                        <option value="7:00 AM">7:00 AM</option>
+                        <option value="8:00 AM">8:00 AM</option>
+                        <option value="9:00 AM">9:00 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="1:00 PM">1:00 PM</option>
+                        <option value="2:00 PM">2:00 PM</option>
+                        <option value="3:00 PM">3:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                        <option value="5:00 PM">5:00 PM</option>
+                    </select>
+
+                    <!-- Botón enviar a WhatsApp -->
+                    <button type="submit" class="whatsapp-btn">Enviar vía WhatsApp</button>
+                </form>
+            </div>
+
+            <!-- Botón para cerrar popup -->
+            <button class="popup-close">&times;</button>
+        </div>
+    </div>
+    <!--LAYOUT PRINCIPAL-->
+    <div class="layout">
+        <!--MENU-->
+        <section class="layout__menu">
+            <header class="menu__navbar">
+                <!--Logo principal-->
+                <div class="navbar__logo">
+                    <a href="./index.html" class="navbar__link-logo">
+                        <img src="./assets/img/MEDICALL/MEDICALLname-nobg.png" class="navbar__logo-light"
+                            alt="ImagenLogo">
+                        <img src="./assets/img/MEDICALL/MEDICALL_white - name.png" class="navbar__logo-dark"
+                            alt="ImagenLogo">
+                    </a>
+                </div>
+                <!--Boton de menu responsive-->
+                <div class="navbar__mobile-btn">
+                    <button class="mobile-btn__wrap">
+                        <span class="mobile-btn__line"></span>
+                        <span class="mobile-btn__line"></span>
+                        <span class="mobile-btn__line"></span>
+                    </button>
+
+                </div>
+                <!--Navegacion-->
+                <nav class="navbar__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="./index.html" class="nav__title">HOME</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__title">Servicios
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="./services.html#consulta" class="submenu__title">Consulta</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#cardiologia" class="submenu__title">Cardiologia</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#neurologia" class="submenu__title">Neurologia</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#pediatria" class="submenu__title">Pediatria</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#traumatologia" class="submenu__title">Traumatologia</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#urologia" class="submenu__title">Urologia</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#ginecologia" class="submenu__title">Ginecologia</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#geriatria" class="submenu__title">Geriatria</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#oncologia" class="submenu__title">Oncologia</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__title">Equipo
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="./services.html#consulta" class="submenu__title">Consulta</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#cardiologia" class="submenu__title">Cardiologia</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#neurologia" class="submenu__title">Neurologia</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#pediatria" class="submenu__title">Pediatria</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#traumatologia" class="submenu__title">Traumatologia</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#urologia" class="submenu__title">Urologia</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#ginecologia" class="submenu__title">Ginecologia</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#geriatria" class="submenu__title">Geriatria</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="./services.html#oncologia" class="submenu__title">Oncologia</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./index.html#blog" class="nav__title">Blog
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__title">
+                                <i class="fa-solid fa-globe nav__language"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">English</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Español</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item-contact">
+                            <a href="#contact" class="nav__title-contact open-popup-btn">Contacto</a>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </header>
+        </section>
+        <!-- ARTÍCULO ARTICULACIONES -->
+        <section id="article" class="layout__article">
+            <div class="article__container">
+                <!-- Contenido principal -->
+                <div class="article__content">
+                    <h1 class="article__title">Cómo proteger tus articulaciones a tiempo</h1>
+                    <div class="article__hero">
+                        <img src="./assets/img/blog2.jpg" alt="Imagen principal del artículo"
+                            class="article__hero-img" />
+                    <div class="article__author">
+                        <img src="./assets/img/MEDICALL/doctorprincipal.jpg" alt="Dr. Cesar Costa" class="article__author-img" />
+                        <div class="article__author-info">
+                            <p class="article__author-name">Dr. Cesar Costa</p>
+                            <p class="article__author-job">Oncología</p>
+                        </div>
+                    </div>
+                    </div>
+                    <p class="article__intro">
+                        Las articulaciones son fundamentales para el movimiento y la calidad de vida.
+                        Protegerlas desde una edad temprana previene dolores crónicos, desgaste y lesiones futuras.
+                        Incorporar hábitos de cuidado, ejercicios específicos y atención a la postura permite mantener
+                        la movilidad y prevenir problemas degenerativos.
+                    </p>
+
+                    <!-- Sección Prevención -->
+                    <section id="prevencion" class="article__section">
+                        <h2 class="article__subtitle">Prevención de lesiones</h2>
+                        <p>
+                            Mantener un peso saludable, evitar esfuerzos excesivos y fortalecer los músculos que rodean
+                            las articulaciones son medidas preventivas esenciales.
+                            Actividades de bajo impacto como natación, ciclismo o yoga fortalecen sin sobrecargar las
+                            articulaciones.
+                            Además, conocer la técnica correcta al levantar objetos o practicar deportes evita daños
+                            innecesarios.
+                        </p>
+                        <div class="article__list-container">
+                            <p class="article__list-title">Hábitos preventivos:</p>
+                            <ul class="article__list">
+                                <li>
+                                    Mantener un peso adecuado
+                                    <p class="article__li-text">Reducir la carga sobre rodillas, caderas y columna
+                                        previene desgaste y dolor crónico.</p>
+                                </li>
+                                <li>
+                                    Fortalecer músculos
+                                    <p class="article__li-text">Ejercicios de fuerza protegen las articulaciones y
+                                        mejoran la estabilidad y movilidad.</p>
+                                </li>
+                                <li>
+                                    Evitar sobreesfuerzos
+                                    <p class="article__li-text">Respetar los límites del cuerpo durante actividades
+                                        físicas previene lesiones agudas.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Sección Ejemplos -->
+                    <section id="ejemplos" class="article__section">
+                        <h2 class="article__subtitle">Ejemplos de cuidado diario</h2>
+                        <p>
+                            Incorporar pausas activas durante la jornada laboral, usar calzado adecuado y realizar
+                            estiramientos específicos mantiene las articulaciones saludables.
+                            Evitar posturas prolongadas y alternar actividades de impacto alto con ejercicios de
+                            recuperación es clave para prevenir lesiones a largo plazo.
+                            Pequeños ajustes diarios tienen un impacto significativo en la protección articular.
+                        </p>
+                        <div class="article__list-container">
+                            <p class="article__list-title">Acciones recomendadas:</p>
+                            <ul class="article__list">
+                                <li>
+                                    Estiramientos matutinos
+                                    <p class="article__li-text">Mejoran la flexibilidad y preparan las articulaciones
+                                        para las actividades del día.</p>
+                                </li>
+                                <li>
+                                    Ejercicio regular de bajo impacto
+                                    <p class="article__li-text">Natación, caminata y yoga fortalecen sin desgastar las
+                                        articulaciones.</p>
+                                </li>
+                                <li>
+                                    Descanso adecuado
+                                    <p class="article__li-text">Permitir la recuperación articular reduce la inflamación
+                                        y el riesgo de lesiones.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Galería -->
+                    <div class="article__gallery">
+                        <img src="./assets/img/blog2.jpg" alt="Ejemplo 1" class="article__img" />
+                        <img src="./assets/img/blog2.jpg" alt="Ejemplo 2" class="article__img" />
+                        <img src="./assets/img/blog2.jpg" alt="Ejemplo 3" class="article__img" />
+                    </div>
+
+                    <!-- Sección Opiniones -->
+                    <section id="opiniones" class="article__section">
+                        <h2 class="article__subtitle">Opiniones de especialistas</h2>
+                        <p>
+                            Fisioterapeutas y ortopedistas recomiendan iniciar rutinas preventivas desde la juventud
+                            para minimizar riesgos.
+                            Identificar señales tempranas de dolor, inflamación o rigidez permite intervenir a tiempo.
+                            La combinación de ejercicio, postura adecuada y hábitos saludables asegura articulaciones
+                            fuertes y funcionales durante toda la vida.
+                        </p>
+                    </section>
+                </div>
+
+                <!-- Aside -->
+                <aside class="article__aside">
+                    <ul class="aside__list">
+                        <li><a href="#prevencion" class="aside__link">Prevención</a></li>
+                        <li><a href="#ejemplos" class="aside__link">Ejemplos</a></li>
+                        <li><a href="#opiniones" class="aside__link">Opiniones</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+        <!--BLOG-->
+        <section id="blog" class="layout__blogs">
+            <div class="blogs_display">
+                <div class="display__title">
+                    <div class="title__container">
+                        <p class="title__text">BLOG</p>
+                    </div>
+                    <div class="subtitle__container">
+                        <p class="subtitle__text">Información para mantenerte saludable
+                        </p>
+                    </div>
+                    <div class="subtitle__subcontainer">
+                        <p class="subtitle__subtext">Explora consejos de expertos, noticias de salud y artículos fáciles
+                            de entender para guiar tu camino hacia el bienestar
+                        </p>
+                    </div>
+                </div>
+                <div class="blogs__list">
+                    <a href="./article-kid.html" class="blogs__blog">
+                        <div class="blogs__img">
+                            <img class="blogs__image" src="./assets/img/blog1.jpg" alt="blog">
+                        </div>
+                        <div class="blogs__info">
+                            <p class="blogs__title">Como afecta tu rutina en el futuro de tu hijo</p>
+
+                            <div class="blogs__description">
+                                <div class="blogs__date">
+                                    <i class="fa-solid fa-calendar-times blog__calendar"></i>
+                                    <p class="blogs__date-info">Dic 15, 2024</p>
+                                </div>
+                                <div class="blogs__time">
+                                    <i class="fa-solid fa-clock blog__calendar"></i>
+                                    <p class="blogs__time-info">5 min read</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </a>
+                    <a href="./article-articulacion.html" class="blogs__blog">
+                        <div class="blogs__img">
+                            <img class="blogs__image" src="./assets/img/blog2.jpg" alt="blog">
+                        </div>
+                        <div class="blogs__info">
+                            <p class="blogs__title">Cómo proteger tus articulaciones a tiempo</p>
+
+                            <div class="blogs__description">
+                                <div class="blogs__date">
+                                    <i class="fa-solid fa-calendar-times blog__calendar"></i>
+                                    <p class="blogs__date-info">Ene 6, 2025</p>
+                                </div>
+                                <div class="blogs__time">
+                                    <i class="fa-solid fa-clock blog__calendar"></i>
+                                    <p class="blogs__time-info">5 min read</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </a>
+                    <a href="./article-hinch.html" class="blogs__blog">
+                        <div class="blogs__img">
+                            <img class="blogs__image" src="./assets/img/blog3.jpg" alt="blog">
+                        </div>
+                        <div class="blogs__info">
+                            <p class="blogs__title">Lo que tu cuerpo intenta decirte cuando esta hinchado</p>
+
+                            <div class="blogs__description">
+                                <div class="blogs__date">
+                                    <i class="fa-solid fa-calendar-times blog__calendar"></i>
+                                    <p class="blogs__date-info">Feb 12, 2024</p>
+                                </div>
+                                <div class="blogs__time">
+                                    <i class="fa-solid fa-clock blog__calendar"></i>
+                                    <p class="blogs__time-info">5 min read</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+        <!--PIE DE PAGINA-->
+        <footer class="layout__footer">
+            <div class="footer__container">
+
+                <section class="footer__real">
+                    <div class="footer__real__container">
+                        <p class="footer__real__title">Tu camino hacia el bienestar comienza con un solo clic</p>
+                        <p class="footer__real__subtitle">Reserva tu cita hoy y vive una atención experta diseñada para
+                            ti y para mejorar tu salud</p>
+                        <div class="footer__real__subcontainer">
+                            <p class="footer__real__button open-popup-btn">Contáctanos</p>
+                            <p class="footer__real__button">Nuestros servicios</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="footer__main">
+                    <div class="footer__fright">
+                        <div class="footer__widget--50">
+                            <h6 class="widget__title">Servicios</h6>
+
+                            <ul class="widget__list">
+                                <li class="widget__item">
+                                    <a href="#" class="widget__link">Cardiologia</a>
+                                </li>
+                                <li class="widget__item">
+                                    <a href="#" class="widget__link">Neurologia</a>
+                                </li>
+                                <li class="widget__item">
+                                    <a href="#" class="widget__link">Pediatria</a>
+                                </li>
+                                <li class="widget__item">
+                                    <a href="#" class="widget__link">Traumatologia</a>
+                                </li>
+                                <li class="widget__item">
+                                    <a href="#" class="widget__link">Urologia</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__widget--25">
+                            <h6 class="widget__title">Recursos</h6>
+
+                            <ul class="widget__list">
+                                <li class="widget__item">
+                                    <a href="#" class="widget__link">Blog</a>
+                                </li>
+                                <li class="widget__item">
+                                    <a href="#" class="widget__link">Formacion</a>
+                                </li>
+                                <li class="widget__item">
+                                    <a href="#" class="widget__link">Portafolio</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__widget--25">
+                            <h6 class="widget__title">Soporte</h6>
+
+                            <ul class="widget__list">
+                                <li class="widget__item">
+                                    <a href="#" class="widget__link">Contacto</a>
+                                </li>
+                                <li class="widget__item">
+                                    <a href="#" class="widget__link">Politica y Privaciodad</a>
+                                </li>
+                                <li class="widget__item">
+                                    <a href="#" class="widget__link">Terminos de Uso</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="footer__fleft">
+                        <div class="fleft__container">
+                            <h2 class="fleft__title">Newsletter</h2>
+                            <p class="fleft__subtitle">
+                                Recibe actualizaciones al instante, nuevas publicaciones, promociones y más. Unete al
+                                club!
+                            </p>
+                            <form class="fleft__form">
+                                <div class="fleft__group">
+                                    <span class="fleft__mail-icon">
+                                        <i class="fa-solid fa-envelope-open fleft__icon"></i>
+                                    </span>
+                                    <input type="email" class="fleft__form-control" placeholder="Correo Electronico">
+                                    <button class="fleft__btn">Suscribete</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </section>
+                <section class="footer__top">
+                    <img class="footer__img" src="./assets/img/MEDICALL/MEDICALLname-nobg.png" alt="medical logo">
+                    <ul class="footer__social">
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <i class="fa-brands fa-facebook-f social__img"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <i class="fa-brands fa-twitter social__img"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <i class="fa-brands fa-youtube social__img"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <i class="fa-brands fa-linkedin social__img"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <i class="fa-brands fa-instagram social__img"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <i class="fa-brands fa-pinterest-p social__img"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section class="footer__bottom">
+                    <div class="footer__copyright">
+                        <span class="copyright__text">
+                            &copy; 2025. Todos los Derechos Reservados a <a href="#">Erik Vigil</a>
+                        </span>
+                    </div>
+                    <div class="footer__links">
+                        <ul class="footer__flinks">
+                            <li class="flinks__item flinks__item--separator">
+                                <a href="#" class="flinks__title">Politicas de privacidad</a>
+                            </li>
+                            <li class="flinks__item flinks__item--separator">
+                                <a href="#" class="flinks__title">Terminos de Uso</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>

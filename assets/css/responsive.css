@@ -9,7 +9,7 @@
   }
 
   .layout__banner {
-    margin: 0 9.5rem;
+    margin: 0rem;
     min-height: 85rem;
   }
 }
@@ -799,7 +799,7 @@
   .layout__banner {
     min-height: 60rem;
     /* mantener altura mínima */
-    margin: 0 2rem;
+    margin: 0rem;
     padding-top: 5rem;
     padding-bottom: 7rem;
 
@@ -1263,7 +1263,7 @@
 
   .layout__banner {
     padding: 8rem 3rem;
-    margin: 0 3rem;
+    margin: 0rem;
   }
 
   .banner__title {

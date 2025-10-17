@@ -4,46 +4,58 @@
 const popup = document.getElementById("popup");
 const openButtons = document.querySelectorAll(".open-popup-btn");
 const closeButton = document.querySelector(".popup-close");
-const appointmentForm = document.getElementById("appointment-form");
-const emergencyBtn = document.querySelector(".emergency-btn");
+const contactForm = document.getElementById("contact-form"); // ID del formulario actualizado
 
 // ---------------------
 // 2️⃣ FUNCIONES ABRIR / CERRAR
 // ---------------------
+// Función para abrir el popup
+const openPopup = () => {
+  popup.classList.add("show");
+};
+
+// Función para cerrar el popup
+const closePopup = () => {
+  popup.classList.remove("show");
+};
+
+// Asignar evento a todos los botones de apertura
 openButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    popup.classList.add("show");
+  btn.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevenir comportamiento por defecto del enlace
+    openPopup();
   });
 });
 
-closeButton.addEventListener("click", () => {
-  popup.classList.remove("show");
-});
+// Asignar evento al botón de cierre
+closeButton.addEventListener("click", closePopup);
 
+// Asignar evento para cerrar al hacer clic fuera del contenido
 popup.addEventListener("click", (e) => {
   if (e.target === popup) {
-    popup.classList.remove("show");
+    closePopup();
   }
 });
 
 // ---------------------
-// 3️⃣ BOTÓN EMERGENCIA
+// 3️⃣ FORMULARIO WHATSAPP
 // ---------------------
-emergencyBtn.addEventListener("click", () => {
-  window.location.href = "tel:+5211234567890"; // tu número
-});
-
-// ---------------------
-// 4️⃣ FORMULARIO WHATSAPP
-// ---------------------
-appointmentForm.addEventListener("submit", (e) => {
+contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  
+  // Obtenemos el valor del servicio seleccionado
   const service = document.getElementById("service").value;
-  const time = document.getElementById("time").value;
 
-  const message = `Hola MEDICALL, quiero agendar una cita.\nServicio: ${service}\nHorario preferido: ${time}`;
-  const whatsappNumber = "5211234567890";
+  // CAMBIA ESTO: Tu número de WhatsApp
+  const whatsappNumber = "5218712630722"; 
 
+  // Mensaje actualizado para EVOKODE
+  const message = `Hola EVOKODE STUDIO, me gustaría cotizar un proyecto.\n\nServicio de interés: ${service}`;
+
+  // Creamos y abrimos la URL de WhatsApp
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   window.open(whatsappURL, "_blank");
+
+  // Opcional: Cerrar el popup después de enviar
+  closePopup();
 });

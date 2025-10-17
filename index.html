@@ -3,1601 +3,775 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Meta para configurar el viewport y que sea responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Cargar Fuentes-->
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
-    <link rel="stylesheet" href="./assets/fonts/dmsans/dmsans.css">
-    <!--Cargar Estilos-->
-    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <!--<link rel="stylesheet" href="./assets/css/dark.css">-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+
     <!--Cargar JS-->
-    <script src="./assets/js/menu-mobile.js"defer></script>
-    <script src="./assets/js/navbar-fixed.js" defer></script>
+    <script src="./assets/js/accordion.js" defer></script>
     <script src="./assets/js/dark.js" defer></script>
-    <script src="./assets/js/home-scroll.js" defer></script>
-    <script src="./assets/js/ALL-Scroll.js" defer></script>
-    <script src="./assets/js/about-benefits-scroll.js" defer></script>
-    <script src="./assets/js/faqs.js" defer></script>
     <script src="./assets/js/popup.js" defer></script>
-    <!-- Título SEO-friendly -->
-    <title>Medicall | Consultorio Médico Integral en Saltillo</title>
-    <!-- Meta descripción (máx 160 caracteres, clara y atractiva) -->
+    <script src="./assets/js/header-scroll.js" defer></script>
+    <script src="./assets/js/mobile-menu.js" defer></script>
+    <script src="./assets/js/text-animation-hi.js" defer></script>
+    <script src="./assets/js/i18n.js" defer></script>
+
+    <title>EVOKODE STUDIO | Diseño y Desarrollo Web</title>
     <meta name="description"
-        content="En Medicall ofrecemos atención médica profesional en consulta general, cardiología, neurología y más. Tu salud en manos expertas.">
-    <!-- Autor -->
-    <meta name="author" content="Medicall Consultorio Médico">
-    <!-- Palabras clave (ya no tan relevantes, pero no molestan) -->
-    <meta name="keywords" content="consultorio médico, consulta general, cardiología, neurología, salud, Medicall">
-    <!-- Favicon -->
-    <link rel="icon" href="./assets/img/MEDICALL/MEDICALL_white -logo.ico" type="image/png">
-    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-    <meta property="og:title" content="Medicall | Consultorio Médico Integral">
+        content="EVOKODE STUDIO: Creamos experiencias digitales únicas. Especialistas en diseño web, desarrollo front-end y branding para potenciar tu marca.">
+    <meta name="author" content="EVOKODE STUDIO">
+    <meta name="keywords" content="diseño web, desarrollo web, front-end, branding, diseñador digital, evokode">
+
+    <link rel="icon" href="./assets/img/EVO-IMG/EVOKODE-removebg-preview.png" type="image/x-icon">
+
+    <meta property="og:title" content="EVOKODE STUDIO | Diseño y Desarrollo Web">
     <meta property="og:description"
-        content="Consulta médica, cardiología, neurología y más. Atención profesional y humana en Medicall.">
-    <meta property="og:image" content="https://evokode-studio.github.io/MEDICALL/assets/img/MEDICALL/MEDICALLcomplete.png">
-    <meta property="og:url" content="https://evokode-studio.github.io/MEDICALL/">
+        content="Creamos experiencias digitales únicas. Especialistas en diseño web, desarrollo front-end y branding.">
+    <meta property="og:image" content="URL_A_TU_IMAGEN_DE_PREVIEW_EVOKODE">
+    <meta property="og:url" content="URL_DE_TU_SITIO_EVOKODE">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_MX">
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Medicall | Consultorio Médico Integral">
-    <meta name="twitter:description"
-        content="Consulta médica, cardiología, neurología y más. Atención profesional y humana en Medicall.">
-    <meta name="twitter:image" content="https://evokode-studio.github.io/MEDICALL/assets/img/MEDICALL/MEDICALLcomplete.png">
-    <!-- Canonical (para evitar contenido duplicado) -->
-    <link rel="canonical" href="https://evokode-studio.github.io/MEDICALL/">
 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EVOKODE STUDIO | Diseño y Desarrollo Web">
+    <meta name="twitter:description"
+        content="Creamos experiencias digitales únicas. Especialistas en diseño web, desarrollo front-end y branding.">
+    <meta name="twitter:image" content="URL_A_TU_IMAGEN_DE_PREVIEW_EVOKODE">
+
+    <link rel="canonical" href="https://evokode-studio.github.io/EVOKODE/">
 </head>
 
 <body>
-    <!--Boton Modo Oscuro-->
-    <div class="switcher">
-        <button class="switcher__btn">
-            <span class="switcher__icon-light">
-                <i class="fa-solid fa-moon switcher__icon"></i>
-            </span>
-            <span class="switcher__icon-dark">
-                <i class="fa-solid fa-lightbulb switcher__icon"></i>
-            </span>
-
-        </button>
-
-    </div>
-    <!--MENU NAVEGACION RESPONSIVE -->
-    <div class="menu-mobile">
-        <div class="menu-mobile__header">
-            <div class="menu-mobile__container-logo">
-                <a class="menu-mobile__link-logo" href="./index.html">
-                    <img src="./assets/img/MEDICALL/MEDICALLname-nobg.png" alt="logodelsitio"
-                        class="menu-mobile__logo-light">
-                    <img src="./assets/img/MEDICALL/MEDICALL_white - name.png" alt="logodelsitio"
-                        class="menu-mobile__logo-dark">
-                </a>
-                <button class="menu-mobile__close">
-                    <i class="menu-mobile__icon fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="menu-mobile__idioms">
-                <a href="#" class="menu-mobile__idiom">English</a>
-                <a href="#" class="menu-mobile__idiom">Español</a>
-            </div>
-
-
-        </div>
-        <div class="menu-mobile__body">
-            <nav class="menu-mobile__nav">
-                <ul class="menu-mobile__list">
-                    <li class="menu-mobile__item">
-                        <a href="./index.html" class="menu-mobile__title">HOME</a>
-                    </li>
-                    <li class="menu-mobile__item">
-                        <a href="#services" class="menu-mobile__title">
-                            Servicios
-                            <i class="fa-solid fa-chevron-down menu-mobile__icon"></i>
-                        </a>
-                        <ul class="menu-mobile__submenu">
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#consulta" class="submenu-mobile__title">Consulta</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#cardiologia" class="submenu-mobile__title">Cardiologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#neurologia" class="submenu-mobile__title">Neurologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#pediatria" class="submenu-mobile__title">Pediatria</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#traumatologia" class="submenu-mobile__title">Traumatologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#urologia" class="submenu-mobile__title">Urologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#ginecologia" class="submenu-mobile__title">Ginecologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#geriatria" class="submenu-mobile__title">Geriatria</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#traumatologia" class="submenu-mobile__title">Traumatologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#oncologia" class="submenu-mobile__title">Oncologia</a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="menu-mobile__item">
-                        <a href="#" class="menu-mobile__title">
-                            Equipo
-                            <i class="fa-solid fa-chevron-down menu-mobile__icon"></i>
-                        </a>
-                        <ul class="menu-mobile__submenu">
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#consulta" class="submenu-mobile__title">Consulta</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#cardiologia" class="submenu-mobile__title">Cardiologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#neurologia" class="submenu-mobile__title">Neurologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#pediatria" class="submenu-mobile__title">Pediatria</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#traumatologia" class="submenu-mobile__title">Traumatologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#urologia" class="submenu-mobile__title">Urologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#ginecologia" class="submenu-mobile__title">Ginecologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#geriatria" class="submenu-mobile__title">Geriatria</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#traumatologia" class="submenu-mobile__title">Traumatologia</a>
-                            </li>
-                            <li class="submenu-mobile__item">
-                                <a href="./services.html#oncologia" class="submenu-mobile__title">Oncologia</a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="menu-mobile__item">
-                        <a href="./index.html#blog" class="menu-mobile__title">Blog</a>
-                    </li>
-
-                </ul>
-            </nav>
-            </nav>
-        </div>
-        <div class="menu-mobile__bottom">
-            <div class="menu-mobile__div">
-                <a href="#" class="menu-mobile-icon"><i class="fa-brands fa-whatsapp menu-mobile-i"></i></a>
-                <a href="#" class="menu-mobile-icon"><i class="fa-brands fa-facebook menu-mobile-i"></i></a>
-                <a href="#" class="menu-mobile-icon"><i class="fa-brands fa-instagram menu-mobile-i"></i></a>
-            </div>
-            <div class="menu-mobile__item-contact">
-                <a href="#contact" class="menu-mobile__title-contact open-popup-btn">Contactanos</a>
-            </div>
-        </div>
-    </div>
-    <!-- POPUP CONSULTORIO -->
-    <div id="popup" class="popup-overlay hidden">
+    <!-- POPUP CONTACTO -->
+    <div id="popup" class="popup-overlay">
         <div class="popup-content">
+            <button class="popup-close">&times;</button>
 
-            <!-- SECCIÓN IZQUIERDA: EMERGENCIA -->
-            <div class="popup-left">
-                <h2>¿Necesitas una ambulancia?</h2>
-                <p>En caso de emergencia, llama de inmediato para recibir atención rápida.</p>
-                <a href="tel:+521XXXXXXXXXX" class="emergency-btn">
-                    <!-- Ícono de teléfono grande -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="phone-icon" viewBox="0 0 24 24" fill="currentColor"
-                        width="60" height="60">
-                        <path
-                            d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.74 3.83.74a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22.5 1.5 13.93 1.5 3a1 1 0 011-1H6a1 1 0 011 1c0 1.33.26 2.63.74 3.83a1 1 0 01-.21 1.11l-2.91 2.85z" />
-                    </svg>
-                </a>
-            </div>
+            <div class="popup-form-container">
+                <h2 data-i18n-key="popup_title"></h2>
+                <p data-i18n-key="popup_subtitle"></p>
 
-            <!-- SECCIÓN DERECHA: AGENDAR CITA -->
-            <div class="popup-right">
-
-                <h1>Ó</h1>
-                <h2>Agendar una cita</h2>
-                <form id="appointment-form">
-                    <!-- Pregunta 1: Especialidad -->
-                    <label for="specialty">¿Qué necesitas?</label>
-                    <select id="specialty" required>
-                        <option value="">Selecciona una especialidad</option>
-                        <option value="Cardiología">Cardiología</option>
-                        <option value="Urología">Urología</option>
-                        <option value="Pediatría">Pediatría</option>
-                        <option value="Medicina General">Medicina General</option>
-                        <option value="Dermatología">Dermatología</option>
+                <form id="contact-form">
+                    <label for="service" data-i18n-key="popup_form_label"></label>
+                    <select id="service" required>
+                        <option value="" data-i18n-key="popup_form_option_default"></option>
+                        <option value="Web Design" data-i18n-key="popup_form_option_1"></option>
+                        <option value="Web Development" data-i18n-key="popup_form_option_2"></option>
+                        <option value="Branding" data-i18n-key="popup_form_option_3"></option>
+                        <option value="Wedding Invitation" data-i18n-key="popup_form_option_4"></option>
+                        <option value="Courses" data-i18n-key="popup_form_option_5"></option>
                     </select>
 
-                    <!-- Pregunta 2: Horario -->
-                    <label for="time">¿Qué horario te acomoda mejor?</label>
-                    <select id="time" required>
-                        <option value="">Selecciona un horario</option>
-                        <option value="7:00 AM">7:00 AM</option>
-                        <option value="8:00 AM">8:00 AM</option>
-                        <option value="9:00 AM">9:00 AM</option>
-                        <option value="10:00 AM">10:00 AM</option>
-                        <option value="11:00 AM">11:00 AM</option>
-                        <option value="12:00 PM">12:00 PM</option>
-                        <option value="1:00 PM">1:00 PM</option>
-                        <option value="2:00 PM">2:00 PM</option>
-                        <option value="3:00 PM">3:00 PM</option>
-                        <option value="4:00 PM">4:00 PM</option>
-                        <option value="5:00 PM">5:00 PM</option>
-                    </select>
-
-                    <!-- Botón enviar a WhatsApp -->
-                    <button type="submit" class="whatsapp-btn">Enviar vía WhatsApp</button>
+                    <button type="submit" class="whatsapp-btn" data-i18n-key="popup_form_button"></button>
                 </form>
             </div>
-
-            <!-- Botón para cerrar popup -->
-            <button class="popup-close">&times;</button>
         </div>
     </div>
     <!--LAYOUT PRINCIPAL-->
     <div class="layout">
-        <!--MENU-->
-        <section class="layout__menu">
-            <header class="menu__navbar">
-                <!--Logo principal-->
-                <div class="navbar__logo">
-                    <a href="./index.html" class="navbar__link-logo">
-                        <img src="./assets/img/MEDICALL/MEDICALLname-nobg.png" class="navbar__logo-light"
-                            alt="ImagenLogo">
-                        <img src="./assets/img/MEDICALL/MEDICALL_white - name.png" class="navbar__logo-dark"
-                            alt="ImagenLogo">
+        <header class="header">
+
+            <div class="desktop-nav-container">
+                <nav class="navbar">
+                    <a href="#" class="navbar__logo">
+                        <img src="./assets/img/EVO-IMG/ErikProfile.jpeg" alt="Avatar de Erik">
+                    </a>
+                    <ul class="navbar__menu">
+                        <li class="navbar__item"><a href="#services" class="navbar__link"
+                                data-i18n-key="nav_services"></a></li>
+                        <li class="navbar__item"><a href="#featured-projects" class="navbar__link"
+                                data-i18n-key="nav_projects"></a></li>
+                        <li class="navbar__item"><a href="#pricing" class="navbar__link" data-i18n-key="nav_prices"></a>
+                        </li>
+
+                        <li class="navbar__item nav-item--language"> <a href="#" class="navbar__link"
+                                aria-label="Change language"><i class="fas fa-globe"></i></a>
+                            <div class="language-dropdown-wrapper">
+                                <ul class="language-dropdown">
+                                    <li><button class="language-switcher" data-lang="en">English</button></li>
+                                    <li><button class="language-switcher" data-lang="es">Español</button></li>
+                                    <li><button class="language-switcher" data-lang="pt">Português</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="navbar__cta open-popup-btn" data-i18n-key="nav_contact"></a>
+                </nav>
+
+                <div class="status-bar">
+                    <a href="#" class="status-bar__link">
+                        <img src="./assets/img/EVO-IMG/ErikProfile.jpeg" alt="Avatar de Erik"
+                            class="status-bar__avatar">
+                        <span class="status-bar__text" data-i18n-key="status_available"></span>
+                        <span class="status-bar__indicator"></span>
                     </a>
                 </div>
-                <!--Boton de menu responsive-->
-                <div class="navbar__mobile-btn">
-                    <button class="mobile-btn__wrap">
-                        <span class="mobile-btn__line"></span>
-                        <span class="mobile-btn__line"></span>
-                        <span class="mobile-btn__line"></span>
+            </div>
+
+            <div class="mobile-nav-container">
+                <div class="mobile-header">
+                    <a href="#" class="status-bar__link">
+                        <img src="./assets/img/EVO-IMG/ErikProfile.jpeg" alt="Avatar de Erik"
+                            class="status-bar__avatar">
+                        <span class="status-bar__text" data-i18n-key="status_available"></span>
+                        <span class="status-bar__indicator"></span>
+                    </a>
+                    <button class="mobile-header__hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
                     </button>
-
                 </div>
-                <!--Navegacion-->
-                <nav class="navbar__nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="./index.html" class="nav__title">HOME</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#services" class="nav__title">Servicios
-                                <i class="fa-solid fa-chevron-down nav__icon"></i>
-                            </a>
-                            <ul class="nav__submenu">
-                                <li class="submenu__item">
-                                    <a href="./services.html#consulta" class="submenu__title">Consulta</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#cardiologia" class="submenu__title">Cardiologia</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#neurologia" class="submenu__title">Neurologia</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#pediatria" class="submenu__title">Pediatria</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#traumatologia" class="submenu__title">Traumatologia</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#urologia" class="submenu__title">Urologia</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#ginecologia" class="submenu__title">Ginecologia</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#geriatria" class="submenu__title">Geriatria</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#oncologia" class="submenu__title">Oncologia</a>
-                                </li>
+            </div>
 
-                            </ul>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#services" class="nav__title">Equipo
-                                <i class="fa-solid fa-chevron-down nav__icon"></i>
-                            </a>
-                            <ul class="nav__submenu">
-                                <li class="submenu__item">
-                                    <a href="./services.html#consulta" class="submenu__title">Consulta</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#cardiologia" class="submenu__title">Cardiologia</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#neurologia" class="submenu__title">Neurologia</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#pediatria" class="submenu__title">Pediatria</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#traumatologia" class="submenu__title">Traumatologia</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#urologia" class="submenu__title">Urologia</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#ginecologia" class="submenu__title">Ginecologia</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#geriatria" class="submenu__title">Geriatria</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="./services.html#oncologia" class="submenu__title">Oncologia</a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li class="nav__item">
-                            <a href="./index.html#blog" class="nav__title">Blog
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#services" class="nav__title">
-                                <i class="fa-solid fa-globe nav__language"></i>
-                            </a>
-                            <ul class="nav__submenu">
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">English</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Español</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav__item-contact">
-                            <a href="#contact" class="nav__title-contact open-popup-btn">Contacto</a>
-                        </li>
-
-
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu__header">
+                    <a href="#" class="mobile-menu__logo">
+                        <img src="./assets/img/EVO-IMG/ErikProfile.jpeg" alt="Avatar de Erik">
+                    </a>
+                    <button class="mobile-menu__close-btn" id="close-btn" aria-label="Cerrar menú">
+                        &times;
+                    </button>
+                </div>
+                <nav class="mobile-menu__nav">
+                    <ul>
+                        <li><a href="#" data-i18n-key="nav_home"></a></li>
+                        <li><a href="#services" data-i18n-key="nav_services"></a></li>
+                        <li><a href="#featured-projects" data-i18n-key="nav_projects"></a></li>
+                        <li><a href="#pricing" data-i18n-key="nav_prices"></a></li>
                     </ul>
                 </nav>
-            </header>
-        </section>
-        <!--BANNER-->
-        <section id="banner" class="layout__banner">
-            <div class="banner__ekg">
-                <svg viewBox="0 0 2400 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                    <defs>
-                        <filter id="glow">
-                            <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
-                            <feMerge>
-                                <feMergeNode in="coloredBlur" />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
-                        </filter>
-                    </defs>
-
-                    <!-- Dibujo repetido dos veces -->
-                    <polyline
-                        points="0,100 50,100 100,80 120,120 140,60 160,140 180,100 250,100 300,60 320,140 340,100 400,100 450,80 470,120 490,60 510,140 530,100 600,100 650,80 670,120 690,60 710,140 730,100 800,100 850,80 870,120 890,60 910,140 930,100 1000,100 1050,80 1070,120 1090,60 1110,140 1130,100 1200,100 
-              1250,100 1300,80 1320,120 1340,60 1360,140 1380,100 1450,100 1500,60 1520,140 1540,100 1600,100 1650,80 1670,120 1690,60 1710,140 1730,100 1800,100 1850,80 1870,120 1890,60 1910,140 1930,100 2000,100 2050,80 2070,120 2090,60 2110,140 2130,100 2200,100 2250,80 2270,120 2290,60 2310,140 2330,100 2400,100"
-                        stroke="#00ff99" stroke-width="3" fill="none" filter="url(#glow)" stroke-linejoin="round"
-                        stroke-linecap="round" />
-                </svg>
+                <div class="mobile-menu__languages">
+                    <button class="language-switcher" data-lang="en">English</button>
+                    <button class="language-switcher" data-lang="es">Español</button>
+                    <button class="language-switcher" data-lang="pt">Português</button>
+                </div>
+                <a href="#contact" class="mobile-menu__cta open-popup-btn" data-i18n-key="nav_contact"></a>
             </div>
-            <div class="banner__image">
-                <img class="banner__img" src="./assets/img/MEDICALL/MEDICALL_white.png" alt="medicallogo">
-            </div>
-            <!--Contenido del banner
-            <header class="banner__content">
-                <h1 class="banner__title">Consultorio<br>Medico</h1>
-                <a href="#" class="banner__btn">Agenda tu cita</a>
-            </header>-->
-            <!--Formas del banner
-            <div banner__shapes>
-                <ul class="shapes__list">
-                    <li class="shapes__item shapes__item--shape1">
-                        <div class="shapes__container">
-                            <img class="shapes__img" src="./assets/img/MEDICALL/MEDICALL_white - name.png" alt="Shape1">
-                        </div>
-                    </li>
-                    <li class="shapes__item shapes__item--shape2">
-                        <div class="shapes__container">
-                            <img class="shapes__img" src="./assets/img/MEDICALL/MEDICALL_white -logo.png" alt="Shape1">
-                        </div>
-                    </li>
-                    <li class="shapes__item shapes__item--shape3">
-                        <div class="shapes__container">
-                            <img class="shapes__img" src="./assets/img/bubble-16.png" alt="Shape1">
-                        </div>
-                    </li>
-                    <li class="shapes__item shapes__item--shape4">
-                        <div class="shapes__container">
-                            <img class="shapes__img" src="./assets/img/bubble-15.png" alt="Shape1">
-                        </div>
-                    </li>
-                    <li class="shapes__item shapes__item--shape5">
-                        <div class="shapes__container">
-                            <img class="shapes__img" src="./assets/img/bubble-14.png" alt="Shape1">
-                        </div>
-                    </li>
-                    <li class="shapes__item shapes__item--shape6">
-                        <div class="shapes__container">
-                            <img class="shapes__img" src="./assets/img/bubble-16.png" alt="Shape1">
-                        </div>
-                    </li>
-                    <li class="shapes__item shapes__item--shape7">
-                        <div class="shapes__container">
-                            <img class="shapes__img" src="./assets/img/bubble-26.png" alt="Shape1">
-                        </div>
-                    </li>
 
-
-                </ul>
-            </div>-->
-
-
-
-        </section>
-        <!--INICIO-->
-        <section id="home" class="layout__home">
-            <div class="home__display">
-                <div class="home__left">
-                    <div class="home__left-reviews">
-                        <div class="home__left-logo">
-                            <img class="home__left-logo-img" src="./assets/img/MEDICALL/MEDICALLname-nobg.png"
-                                alt="medicalllogo">
-                        </div>
-                        <div class="home__reviews-row">
-                            <a href="#" class="left-reviews__circles">
-                                <img class="left-reviews-img" src="./assets/img/testimonial (1).jpg"
-                                    alt="hometestimonial">
-                                <img class="left-reviews-img" src="./assets/img/testimonial3.jpg" alt="hometestimonial">
-                                <img class="left-reviews-img" src="./assets/img/testimonial4.jpg" alt="hometestimonial">
-                                <img class="left-reviews-img" src="./assets/img/testimonial5.jpg" alt="hometestimonial">
-                                <img class="left-reviews-img" src="./assets/img/testimonial7.jpg" alt="hometestimonial">
-                            </a>
-                            <div class="left-reviews__rate">
-                                <div class="left-reviews__stars">
-                                    <i class="fa-solid fa-star home__stars"></i>
-                                    <i class="fa-solid fa-star home__stars"></i>
-                                    <i class="fa-solid fa-star home__stars"></i>
-                                    <i class="fa-solid fa-star home__stars"></i>
-                                    <i class="fa-solid fa-star home__stars"></i>
-                                </div>
-                                <p class="left-reviews__text">Based on 1000+ Reviews</p>
-                            </div>
-                        </div>
+        </header>
+        <!--MAIN-->
+        <main class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title hero__title--left" data-i18n-key="hero_title_left"></h1>
+                <div class="hero__image-wrapper">
+                    <div class="hero__image-container">
+                        <img src="./assets/img/EVO-IMG/evokode-cell.png" alt="Foto de Erik" class="hero__image">
                     </div>
-                    <div class="home__left-info">
-                        <p class="left-info__title">Atencion medica especializada para ti</p>
-                        <p class="left-info__subtitle">Experimenta el trato personal de la
-                            salud, con tu historial, listos para acompañarte</p>
-                        <div class="left-info__buttons">
-                            <a class="left-info__button1 open-popup-btn" href="#contact">Contactanos
-                                <i class="fa-solid fa-arrow-right home__arrow"></i>
-                            </a>
-                            <a class="left-info__button2" href="about">Que Hacemos
-                                <i class="fa-solid fa-arrow-right home__arrow"></i></a>
-
-                        </div>
-                        <div class="left-info__ratings">
-                            <div class="left-info__rating">
-                                <i class="fa-solid fa-pills home__ratings-i"></i>
-                                <div class="left-info__rating-text">
-                                    <p class="left-info__rating-title">Atención</p>
-                                    <p class="left-info__rating-subtitle">24/7 Consultorio abierto</p>
-                                </div>
-                            </div>
-                            <div class="left-info__rating">
-                                <i class="fa-solid fa-prescription home__ratings-i"></i>
-                                <div class="left-info__rating-text">
-                                    <p class="left-info__rating-title">Rating</p>
-                                    <p class="left-info__rating-subtitle">Calificacion de 5 estrellas</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <a href="" class="enlace-div">
-                    <div class="home__right">
-                        <img class="home__right__img" src="./assets/img/MEDICALL/doctormed.png" alt="doctorprincipal">
-                        <div class="home__right__container">
-                            <p class="home__right__name">Dr. Jesus Cobian</p>
-                            <p class="home__right__title">Urologia Integral</p>
-
-                        </div>
-                        <div class="button__go">
-                            <a class="button__go__arrow" href="#"><i
-                                    class="fa-solid fa-arrow-right button__go__i"></i></a>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-        <!--ABOUT US-->
-        <section id="about" class="layout__about">
-            <div class="about_grid">
-                <div class="about__space1">
-                    <div class="title__container">
-                        <p class="title__text">Sobre Nosotros</p>
-                    </div>
-                </div>
-                <div class="about__space2">
-                    <p class="about__text">En MEDICALL estamos más cerca de lo que crees, con tu historial y toda tu
-                        información<br>
-                        <span class="about__span">Somos tu aliado en pronta atención, rutina y bienestar general, equipo
-                            medico, y más...</span>
-                    </p>
-
-                </div>
-                <div class="about__space3">
-                    <div class="about__img">
-                        <img class="about__image" src="./assets/img/MEDICALL/equipomedicos.avif" alt="equipomedico">
-                    </div>
-                </div>
-                <div class="about__space4">
-                    <div class="about__space4__display">
-                        <div class="space4__item1">
-                            <i class="fa-solid fa-arrow-right space4__arrow"></i>
-                            <p class="space4__number">1000+</p>
-                            <p class="space4__text">Pacientes atendidos</p>
-                        </div>
-                        <div class="space4__item2">
-                            <i class="fa-solid fa-arrow-right space4__arrow"></i>
-                            <p class="space4__number">97%+</p>
-                            <p class="space4__text">Tasa de Recuperación</p>
-                        </div>
-                        <div class="space4__item3">
-                            <i class="fa-solid fa-arrow-right space4__arrow"></i>
-                            <p class="space4__number">30+</p>
-                            <p class="space4__text">Profesionales Certificados</p>
-                        </div>
-                        <div class="space4__item4">
-                            <i class="fa-solid fa-arrow-right space4__arrow"></i>
-                            <p class="space4__number">24/7</p>
-                            <p class="space4__text">Atencion personal</p>
-                        </div>
-                        <div class="space4__item5">
-                            <i class="fa-solid fa-arrow-right space4__arrow"></i>
-                            <p class="space4__number">100+</p>
-                            <p class="space4__text">Servicios especializados</p>
-                        </div>
-                        <div class="space4__item6">
-                            <i class="fa-solid fa-arrow-right space4__arrow"></i>
-                            <p class="space4__number">20+</p>
-                            <p class="space4__text">Años de experiencia</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!--BENEFICIOS-->
-        <section id="benefits" class="layout__benefits">
-            <div class="benefits_display">
-                <div class="display__title">
-                    <div class="title__container">
-                        <p class="title__text">Beneficios</p>
-                    </div>
-                    <div class="subtitle__container">
-                        <p class="subtitle__text">Crece con el apoyo moldeado por la confianza
-                        </p>
-                    </div>
-
-                </div>
-                <div class="benefits__grid">
-                    <div class="benefits__item1">
-                        <div class="benefits__logos">
-                            <i class="fa-solid fa-stethoscope benefits__logo"></i>
-                        </div>
-                        <p class="benefits__title">Atencion y Cuidado</p>
-                        <p class="benefits__subtitle">Servicios de atención médica personalizada, brindados con empatía
-                            y dedicación.</p>
-                    </div>
-                    <div class="benefits__item2">
-                        <div class="benefits__logos">
-                            <i class="fa-solid fa-hospital benefits__logo"></i>
-                        </div>
-                        <p class="benefits__title">A la Vanguardia</p>
-                        <p class="benefits__subtitle">Tratamientos avanzados impulsados por tecnología moderna y
-                            expertos.</p>
-                    </div>
-                    <div class="benefits__item3">
-                        <div class="benefits__logos">
-                            <i class="fa-solid fa-pills benefits__logo"></i>
-                        </div>
-                        <p class="benefits__title">Experiencia confiable</p>
-                        <p class="benefits__subtitle">Trabaja con especialistas calificados que entienden tu atención
-                            médica.</p>
-                    </div>
-                    <div class="benefits__item4">
-                        <div class="benefits__logos">
-                            <i class="fa-solid fa-prescription-bottle benefits__logo"></i>
-                        </div>
-                        <p class="benefits__title">Sin interrupciones</p>
-                        <p class="benefits__subtitle">Desde la primera visita hasta el seguimiento, hacemos que cada
-                            paso sea sencillo y sin estrés.</p>
-                    </div>
-                    <div class="benefits__item5">
-                        <div class="benefits__logo-small">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                        <p class="benefits__item-title"> Una mejor atención <span class="benefits__item-span">
-                                ¿Listo?
-                            </span>
-                        </p>
-                        <p class="benefits__item-text">Nuestro compromiso con la innovación impulsa mejores resultados
-                            para cada paciente</p>
-                        <img class="benefits__img"
-                            src="./assets/img/MEDICALL/iPhone_15_Mockup__Perspective-removebg-preview.png"
-                            alt="medical web">
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!--SERVICIOS-->
-        <section id="services" class="layout__services">
-            <div class="services_display">
-                <div class="display__title">
-                    <div class="title__container">
-                        <p class="title__text">Servicios</p>
-                    </div>
-                    <div class="subtitle__container">
-                        <p class="subtitle__text">Atención experta hecha simple
-                        </p>
-                    </div>
-                </div>
-                <div class="subtitle__subcontainer">
-                    <p class="subtitle__subtext">Ofrecemos una amplia gama de servicios médicos dirigidos por expertos,
-                        diseñados para apoyar tu bienestar.
-                    </p>
-
-                </div>
-                <div class="button__contact-vision">
-                    <a href="./services.html" class="button__contact-v">Ver Todos <i
-                            class="fa-solid fa-arrow-right button__contact-v-arrow "></i></a>
-                </div>
-                <div class="services__grid">
-                    <a href="./services.html#consulta" class="services__item1">
-                        <img class="services__img" src="./assets/img/MEDICALL/profesional (1).png" alt="servicios">
-                        <div class="services__info">
-                            <p class="services__type">Consulta</p>
-                            <i class="fa-solid fa-arrow-right services__arrow"></i>
-                        </div>
-                    </a>
-                    <a href="./services.html#cardiologia" class="services__item2">
-                        <img class="services__img" src="./assets/img/MEDICALL/profesional (2).png" alt="servicios">
-                        <div class="services__info">
-                            <p class="services__type">Cardiologia</p>
-                            <i class="fa-solid fa-arrow-right services__arrow"></i>
-                        </div>
-                    </a>
-                    <a href="./services.html#ginecologia" class="services__item3">
-                        <img class="services__img" src="./assets/img/MEDICALL/profesional (4).png" alt="servicios">
-                        <div class="services__info">
-                            <p class="services__type">Ginecologia</p>
-                            <i class="fa-solid fa-arrow-right services__arrow"></i>
-                        </div>
-                    </a>
-                    <a href="./services.html#neurologia" class="services__item4">
-                        <img class="services__img" src="./assets/img/MEDICALL/profesional (5).png" alt="servicios">
-                        <div class="services__info">
-                            <p class="services__type">Neurologia</p>
-                            <i class="fa-solid fa-arrow-right services__arrow"></i>
-                        </div>
-                    </a>
-                    <a href="./services.html#pediatria" class="services__item5">
-                        <img class="services__img" src="./assets/img/MEDICALL/profesional (3).png" alt="servicios">
-                        <div class="services__info">
-                            <p class="services__type">Pediatria</p>
-                            <i class="fa-solid fa-arrow-right services__arrow"></i>
-                        </div>
-                    </a>
-                    <a href="./services.html#urologia" class="services__item6">
-                        <img class="services__img" src="./assets/img/MEDICALL/profesional (6).png" alt="servicios">
-                        <div class="services__info">
-                            <p class="services__type">Urologia</p>
-                            <i class="fa-solid fa-arrow-right services__arrow"></i>
-                        </div>
+                    <a href="#" class="hero__icon-float">
+                        <span class="hero__icon-text">Hi</span>
                     </a>
                 </div>
-            </div>
-        </section>
-        <!--VISION-->
-        <section id="vision" class="layout__vision">
-            <div class="vision__display">
-                <div class="display__title">
-                    <div class="title__container">
-                        <p class="title__text">Visión</p>
-                    </div>
-                    <div class="subtitle__container">
-                        <p class="subtitle__text">Impulsando la salud con experiencia
-                        </p>
-                    </div>
-                    <div class="subtitle__subcontainer">
-                        <p class="subtitle__subtext">Nuestro equipo médico calificado está comprometido a brindar
-                            atención de confianza y a ayudar a las personas
-                        </p>
-                    </div>
-                    <div class="subtitle__info">
-                        <p class="subtitle__info-text"><i class="fa-solid fa-check"></i> Planes personalizados para cada
-                            paciente</p>
-                        <p class="subtitle__info-text"><i class="fa-solid fa-check"></i> Expertos guia durante todo el
-                            proceso</p>
-                    </div>
-                    <div class="button__contact-vision open-popup-btn">
-                        <a href="#" class="button__contact-v">Contactanos <i
-                                class="fa-solid fa-arrow-right button__contact-v-arrow "></i></a>
-                    </div>
-                </div>
-                <div class="vision__img">
-                    <img class="vision__image" src="./assets/img/MEDICALL/doctors.jpg" alt="doctors">
-                </div>
-
-            </div>
-        </section>
-        <!--PROCESO-->
-        <section id="process" class="layout__process">
-            <div class="process_display">
-                <div class="display__title">
-                    <div class="title__container">
-                        <p class="title__text">Proceso</p>
-                    </div>
-                    <div class="subtitle__container">
-                        <p class="subtitle__text">Conoce nuestro sencillo proceso de atención
-                        </p>
-                    </div>
-                    <div class="subtitle__subcontainer">
-                        <p class="subtitle__subtext">Características de atención médica diseñadas para la claridad y el
-                            cuidado
-                        </p>
-                    </div>
-                </div>
-                <div class="process__grid">
-                    <div class="process__item1">
-                        <i class="fa-solid fa-pills process__icon"></i>
-                        <div class="process__info">
-                            <p class="process__text">Diagnóstico avanzado</p>
-                            <p class="process__description">Resultados rápidos y precisos en la atención</p>
-                        </div>
-                    </div>
-                    <div class="process__item2">
-                        <i class="fa-solid fa-stethoscope process__icon"></i>
-                        <div class="process__info">
-                            <p class="process__text">Cirugía moderna</p>
-                            <p class="process__description">Equipados para procedimientos seguros</p>
-                        </div>
-                    </div>
-                    <div class="process__item3">
-                        <i class="fa-solid fa-hospital process__icon"></i>
-                        <div class="process__info">
-                            <p class="process__text">Tratamientos innovadores</p>
-                            <p class="process__description">Acceso a los avances médicos</p>
-                        </div>
-                    </div>
-                    <div class="process__item4">
-                        <i class="fa-solid fa-capsules process__icon"></i>
-                        <div class="process__info">
-                            <p class="process__text">Atención centrada</p>
-                            <p class="process__description">Planes de tratamiento adaptados a ti</p>
-                        </div>
-                    </div>
-                    <div class="process__item5">
-                        <i class="fa-solid fa-file-prescription process__icon"></i>
-                        <div class="process__info">
-                            <p class="process__text">Personal especializado</p>
-                            <p class="process__description">Expertos en cada especialidad</p>
-                        </div>
-                    </div>
-                    <div class="process__item6">
-                        <i class="fa-solid fa-tablets process__icon"></i>
-                        <div class="process__info">
-                            <p class="process__text">Citas sin complicaciones</p>
-                            <p class="process__description">Reservas fáciles, rápidas y sencillas</p>
-                        </div>
-                    </div>
-                    <div class="process__item7">
-                        <i class="fa-solid fa-prescription-bottle process__icon"></i>
-                        <div class="process__info">
-                            <p class="process__text">Respuesta de emergencia</p>
-                            <p class="process__description">Acción rápida y experta cuando más importa</p>
-                        </div>
-                    </div>
-                    <div class="process__item8">
-                        <i class="fa-solid fa-syringe process__icon"></i>
-                        <div class="process__info">
-                            <p class="process__text">Atención al paciente</p>
-                            <p class="process__description">El cuidado y la orientación que necesitas</p>
-                        </div>
-                    </div>
-                    <div class="process__item9">
-                        <i class="fa-solid fa-house-medical process__icon"></i>
-                        <div class="process__info">
-                            <p class="process__text">Laboratorio interno</p>
-                            <p class="process__description">Resultados rápidos sin esperas</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="process__type">
-                    <div class="process__image">
-                        <img class="process__img" src="./assets/img/MEDICALL/profesional (2).png" alt="process">
-                        <div class="process__contact">
-                            <p class="process__title">Proceso</p>
-                            <p class="process__subtitle">Paso a paso del proceso cuidadoso que llevamos contigo</p>
-                            <a href="#" class="process__button open-popup-btn">
-                                <p class="process__contact-us">Contactanos</p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="process__steps">
-                        <div class="process__step">
-                            <p class="process__number">01</p>
-                            <p class="process__step-title">Planes personalizados</p>
-                            <p class="process__step-subtitle">Estrategias de salud personalizadas según tus necesidades
-                                médicas únicas</p>
-                        </div>
-                        <div class="process__step">
-                            <p class="process__number">02</p>
-                            <p class="process__step-title">Profesionales de confianza</p>
-                            <p class="process__step-subtitle">Médicos y especialistas capacitados guiando cada paso de
-                                la solución</p>
-                        </div>
-                        <div class="process__step">
-                            <p class="process__number">03</p>
-                            <p class="process__step-title">Experiencia fluida</p>
-                            <p class="process__step-subtitle">Desde la reserva hasta el tratamiento: todo de manera
-                                sencilla y sin estrés</p>
-                        </div>
-
-                    </div>
-                </div>
-        </section>
-        <!--TESTIMONIOS-->
-        <section id="testimonials" class="layout__testimonials">
-            <div class="testimonials_display">
-                <div class="display__title">
-                    <div class="title__container">
-                        <p class="title__text">Testimonios</p>
-                    </div>
-                    <div class="subtitle__container">
-                        <p class="subtitle__text">Experiencia y testimonios de nuestro proceso
-                        </p>
-                    </div>
-                    <div class="subtitle__subcontainer">
-                        <p class="subtitle__subtext">Opiniones reales y honestas de los que hemos apoyado
-                            cuidado
-                        </p>
-                    </div>
-                </div>
-                <div class="display__testimonials">
-                    <div class="testimonials__column column1">
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial (1).jpg"
-                                    alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Jason Basteri</p>
-                                    <p class="testimonials__type">Cardiologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Profesionales atentos y cuidadosos, hicieron que
-                                    todo el proceso fuera muy fácil.</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial3.jpg" alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Emily Walker</p>
-                                    <p class="testimonials__type">Neurologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Desde que llegué, el equipo me hizo sentir
-                                    bienvenido y en confianza. Me explicaron cada detalle del proceso con mucha
-                                    paciencia y siempre estuvieron atentos a mis inquietudes, lo que hizo que toda la
-                                    experiencia fuera mucho más tranquila y clara para mí.</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial4.jpg" alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Jose Perez</p>
-                                    <p class="testimonials__type">Urologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Recibí un trato cálido y personalizado, la
-                                    atención fue excelente.</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial5.jpg" alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Sara Carpin</p>
-                                    <p class="testimonials__type">Ginecologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">La atención fue excelente en todo momento. No solo
-                                    demostraron gran conocimiento, sino que también se preocuparon por cómo me sentía
-                                    durante la consulta, dedicando tiempo para que entendiera bien cada paso y
-                                    recomendación sin apurarse.</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial6.jpg" alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Ruben Aguirre</p>
-                                    <p class="testimonials__type">Cardiologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Gracias a ellos me sentí seguro y confiado durante
-                                    toda la consulta</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item testimonials__show">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial (3).jpg"
-                                    alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Aldo Barrón</p>
-                                    <p class="testimonials__type">Urologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Me sentí realmente escuchado y comprendido en cada
-                                    paso de mi visita.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="testimonials__column column2">
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial7.jpg" alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Roberto Cruz</p>
-                                    <p class="testimonials__type">Consulta</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Me sorprendió gratamente la calidez y
-                                    profesionalismo del personal. Me recibieron con una sonrisa, escucharon atentamente
-                                    mis síntomas y respondieron todas mis dudas con explicaciones claras y sencillas, lo
-                                    que me ayudó a sentirme seguro y confiado en el tratamiento.</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial8.jpg" alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Gabriel Suazo</p>
-                                    <p class="testimonials__type">Urologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Excelente servicio durante toda la consulta.</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial (6).jpg"
-                                    alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Vanesa Gaytan</p>
-                                    <p class="testimonials__type">Traumatologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Durante toda la visita, me hicieron sentir
-                                    realmente cuidado. Se tomaron el tiempo necesario para explicarme el diagnóstico y
-                                    las opciones disponibles, siempre con un trato amable y respetuoso, lo que me ayudó
-                                    a tomar decisiones informadas sobre mi salud.</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial (7).jpg"
-                                    alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Hernan Diaz</p>
-                                    <p class="testimonials__type">Urologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Todo el equipo fue muy claro y paciente al
-                                    explicar mi tratamiento</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial (2).jpg"
-                                    alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Josefa Ortiz</p>
-                                    <p class="testimonials__type">Pediatria</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">La experiencia fue muy positiva, gracias a la
-                                    atención personalizada que recibí. El equipo fue paciente y detallista, siempre
-                                    preocupado por mi comodidad y por resolver todas mis preguntas, lo que me dio mucha
-                                    confianza y tranquilidad durante todo el proceso.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="testimonials__column column3">
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial (3).jpg"
-                                    alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Aldo Barrón</p>
-                                    <p class="testimonials__type">Urologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Me sentí realmente escuchado y comprendido en cada
-                                    paso de mi visita.</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial-2.png" alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Luis Loreto</p>
-                                    <p class="testimonials__type">Pedriatria</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Ciertamente un consultorio con todas las
-                                    comodidades 10/10</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial (5).jpg"
-                                    alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Cesar Choux</p>
-                                    <p class="testimonials__type">Oncologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">Me encantó cómo me trataron con tanta empatía y
-                                    profesionalismo. Más allá del diagnóstico, se aseguraron de que comprendiera bien
-                                    todo lo que pasaba y me ofrecieron apoyo constante, lo que marcó una gran diferencia
-                                    en mi recuperación y bienestar.</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial (8).jpg"
-                                    alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Linda Meza</p>
-                                    <p class="testimonials__type">Ginecologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">El equipo fue muy amable y profesional, me
-                                    explicaron todo con claridad y me hicieron sentir cómodo durante la consulta.</p>
-                            </div>
-
-                        </div>
-                        <div class="testimonial__item">
-                            <div class="testimonials__author">
-                                <img class="testimonials__img" src="./assets/img/testimonial (9).jpg"
-                                    alt="testimonials">
-                                <div class="testimonials__info">
-                                    <p class="testimonials__name">Fatima Dristol</p>
-                                    <p class="testimonials__type">Cardiologia</p>
-                                </div>
-
-                            </div>
-                            <div class="testimonials__rating">
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                                <i class="fa-solid fa-star testimonial__star"></i>
-                            </div>
-                            <div class="testimonials__text">
-                                <p class="testimonials__testimonials">El trato fue impecable desde el primer momento,
-                                    demostrando no solo habilidad técnica sino también un genuino interés por mi
-                                    bienestar. Me sentí escuchado y acompañado, y eso me dio mucha seguridad para seguir
-                                    el tratamiento con tranquilidad.</p>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="hero__text-right">
+                    <h1 class="hero__title hero__title--right" data-i18n-key="hero_title_right"></h1>
+                    <p class="hero__description" data-i18n-key="hero_description"></p>
                 </div>
             </div>
-        </section>
-        <!--BLOG-->
-        <section id="blog" class="layout__blogs">
-            <div class="blogs_display">
-                <div class="display__title">
-                    <div class="title__container">
-                        <p class="title__text">BLOG</p>
-                    </div>
-                    <div class="subtitle__container">
-                        <p class="subtitle__text">Información para mantenerte saludable
-                        </p>
-                    </div>
-                    <div class="subtitle__subcontainer">
-                        <p class="subtitle__subtext">Explora consejos de expertos, noticias de salud y artículos fáciles
-                            de entender para guiar tu camino hacia el bienestar
-                        </p>
+            <div class="theme-switcher">
+                <div class="theme-switcher__toggle"></div>
+            </div>
+        </main>
+        <!--SERVICES-->
+        <section id="services" class="services">
+            <div class="services__container">
+
+                <div class="services__text-content">
+                    <h2 class="services__title" data-i18n-key="services_title"></h2>
+                    <p class="services__subtitle" data-i18n-key="services_subtitle"></p>
+
+                    <div class="accordion">
+                        <div class="accordion__item">
+                            <button class="accordion__header">
+                                <i class="fa-solid fa-circle-dot accordion__bullet"></i>
+                                <h3 class="accordion__title" data-i18n-key="services_item1_title"></h3>
+                                <i class="fa-solid fa-chevron-up accordion__icon"></i>
+                            </button>
+                            <div class="accordion__content">
+                                <ul class="accordion__list">
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n-key="services_item1_b1"></span></li>
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n-key="services_item1_b2"></span></li>
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n-key="services_item1_b3"></span></li>
+                                </ul>
+                            </div>
+                            <div class="accordion__preview-img">
+                                <img src="./assets/img/EVO-IMG/ux-mockup.jpg" alt="UI/UX Design Preview">
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__header">
+                                <i class="fa-solid fa-circle-dot accordion__bullet"></i>
+                                <h3 class="accordion__title" data-i18n-key="services_item2_title"></h3>
+                                <i class="fa-solid fa-chevron-up accordion__icon"></i>
+                            </button>
+                            <div class="accordion__content">
+                                <ul class="accordion__list">
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n-key="services_item2_b1"></span></li>
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n-key="services_item2_b2"></span></li>
+                                </ul>
+                            </div>
+                            <div class="accordion__preview-img">
+                                <img src="./assets/img/EVO-IMG/design-mockup.jpg" alt="Graphic Design Preview">
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__header">
+                                <i class="fa-solid fa-circle-dot accordion__bullet"></i>
+                                <h3 class="accordion__title" data-i18n-key="services_item3_title"></h3>
+                                <i class="fa-solid fa-chevron-up accordion__icon"></i>
+                            </button>
+                            <div class="accordion__content">
+                                <ul class="accordion__list">
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n-key="services_item3_b1"></span></li>
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n-key="services_item3_b2"></span></li>
+                                </ul>
+                            </div>
+                            <div class="accordion__preview-img">
+                                <img src="./assets/img/EVO-IMG/web-mockup.png" alt="Web Development Preview">
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__header">
+                                <i class="fa-solid fa-circle-dot accordion__bullet"></i>
+                                <h3 class="accordion__title" data-i18n-key="services_item4_title"></h3>
+                                <i class="fa-solid fa-chevron-up accordion__icon"></i>
+                            </button>
+                            <div class="accordion__content">
+                                <ul class="accordion__list">
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n-key="services_item4_b1"></span></li>
+                                    <li><i class="fa-solid fa-check"></i> <span
+                                            data-i18n-key="services_item4_b2"></span></li>
+                                </ul>
+                            </div>
+                            <div class="accordion__preview-img">
+                                <img src="./assets/img/EVO-IMG/branding-mockup.jpg" alt="Branding Preview">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="blogs__list">
-                    <a href="./article-kid.html" class="blogs__blog">
-                        <div class="blogs__img">
-                            <img class="blogs__image" src="./assets/img/blog1.jpg" alt="blog">
-                        </div>
-                        <div class="blogs__info">
-                            <p class="blogs__title">Como afecta tu rutina en el futuro de tu hijo</p>
 
-                            <div class="blogs__description">
-                                <div class="blogs__date">
-                                    <i class="fa-solid fa-calendar-times blog__calendar"></i>
-                                    <p class="blogs__date-info">Dic 15, 2024</p>
-                                </div>
-                                <div class="blogs__time">
-                                    <i class="fa-solid fa-clock blog__calendar"></i>
-                                    <p class="blogs__time-info">5 min read</p>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </a>
-                    <a href="./article-articulacion.html" class="blogs__blog">
-                        <div class="blogs__img">
-                            <img class="blogs__image" src="./assets/img/blog2.jpg" alt="blog">
-                        </div>
-                        <div class="blogs__info">
-                            <p class="blogs__title">Cómo proteger tus articulaciones a tiempo</p>
-
-                            <div class="blogs__description">
-                                <div class="blogs__date">
-                                    <i class="fa-solid fa-calendar-times blog__calendar"></i>
-                                    <p class="blogs__date-info">Ene 6, 2025</p>
-                                </div>
-                                <div class="blogs__time">
-                                    <i class="fa-solid fa-clock blog__calendar"></i>
-                                    <p class="blogs__time-info">5 min read</p>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </a>
-                    <a href="./article-hinch.html" class="blogs__blog">
-                        <div class="blogs__img">
-                            <img class="blogs__image" src="./assets/img/blog3.jpg" alt="blog">
-                        </div>
-                        <div class="blogs__info">
-                            <p class="blogs__title">Lo que tu cuerpo intenta decirte cuando esta hinchado</p>
-
-                            <div class="blogs__description">
-                                <div class="blogs__date">
-                                    <i class="fa-solid fa-calendar-times blog__calendar"></i>
-                                    <p class="blogs__date-info">Feb 12, 2024</p>
-                                </div>
-                                <div class="blogs__time">
-                                    <i class="fa-solid fa-clock blog__calendar"></i>
-                                    <p class="blogs__time-info">5 min read</p>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </a>
-
+                <div class="services__image-container">
+                    <img src="./assets/img/EVO-IMG/ErikProfile.jpeg" alt="Desk setup">
                 </div>
 
             </div>
         </section>
-        <!--FAQS-->
-        <section id="faqs" class="layout__faqs">
-            <div class="display__title">
-                <div class="title__container">
-                    <p class="title__text">FAQs</p>
+        <!--FEATURED-PROYECTS-->
+        <section id="featured-projects" class="featured-projects">
+            <div class="featured-projects__container">
+
+                <div class="featured-projects__header">
+                    <div class="dot"></div>
+                    <h2 class="featured-projects__title" data-i18n-key="featured_projects_title"></h2>
                 </div>
-                <div class="subtitle__container">
-                    <p class="subtitle__text">Respuestas a tus preguntas</p>
+                <p class="featured-projects__subtitle" data-i18n-key="featured_projects_subtitle"></p>
+
+                <div class="project-showcase">
                 </div>
-                <div class="subtitle__subcontainer">
-                    <p class="subtitle__subtext">Obtén información rápida y clara sobre nuestros servicios, citas,
-                        soporte y más</p>
-                </div>
+
             </div>
 
-            <div class="faqs__container">
-                <div class="faqs__item">
-                    <div class="faqs__question">
-                        <span>¿ Cómo agendo una cita ?</span>
-                        <span class="faq__icon">+</span>
-                    </div>
-                    <div class="faqs__answer">
-                        <p>Puedes agendar desde nuestro website o hacer una llamada para asistencia inmediata</p>
-                    </div>
+            <a href="#projects" class="btn btn--outline" data-i18n-key="featured_project_cta"></a>
+        </section>
+        <!--MORE PROJECTS-->
+        <section id="projects" class="projects">
+            <div class="projects__container">
+
+                <div class="projects__header">
+                    <div class="dot"></div>
+                    <h2 class="projects__title" data-i18n-key="more_projects_title"></h2>
                 </div>
 
-                <div class="faqs__item">
-                    <div class="faqs__question">
-                        <span>¿ Aceptan pacientes sin cita ?</span>
-                        <span class="faq__icon">+</span>
-                    </div>
-                    <div class="faqs__answer">
-                        <p>Claro que sí, sin mayor problema. Nuestro equipo de trabajo está preparado 24/7 para
-                            atenderte</p>
-                    </div>
+                <div class="projects__grid">
+
+                    <article class="post-card">
+                        <a href="project.html?id=onepager" class="post-card__image-link">
+                            <img src="./assets/img/EVO-IMG/onepager-mockup.png" alt="One Pager project preview"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__meta">
+                                <span class="post-card__category" data-i18n-key="more_projects_card1_category"></span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#" data-i18n-key="more_projects_card1_title"></a>
+                            </h3>
+                            <p class="post-card__excerpt" data-i18n-key="more_projects_card1_excerpt"></p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="project.html?id=weddinginvitation" class="post-card__image-link">
+                            <img src="./assets/img/EVO-IMG/ari-mockup.png" alt="Wedding invitation project preview"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__meta">
+                                <span class="post-card__category" data-i18n-key="more_projects_card2_category"></span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#" data-i18n-key="more_projects_card2_title"></a>
+                            </h3>
+                            <p class="post-card__excerpt" data-i18n-key="more_projects_card2_excerpt"></p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="project.html?id=gamerblog" class="post-card__image-link">
+                            <img src="./assets/img/EVO-IMG/gam3r-mockup.png" alt="Gamer blog project preview"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__meta">
+                                <span class="post-card__category" data-i18n-key="more_projects_card3_category"></span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#" data-i18n-key="more_projects_card3_title"></a>
+                            </h3>
+                            <p class="post-card__excerpt" data-i18n-key="more_projects_card3_excerpt"></p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="project.html?id=vowsandlovers" class="post-card__image-link">
+                            <img src="./assets/img/EVO-IMG/vyl-mockup.png" alt="Vows and Lovers project preview"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__meta">
+                                <span class="post-card__category" data-i18n-key="more_projects_card4_category"></span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#" data-i18n-key="more_projects_card4_title"></a>
+                            </h3>
+                            <p class="post-card__excerpt" data-i18n-key="more_projects_card4_excerpt"></p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!--TESTIMONIALS-->
+        <section id="testimonials" class="testimonials">
+            <div class="testimonials__container">
+                <h2 class="testimonials__title" data-i18n-key="testimonials_title"></h2>
+                <p class="testimonials__subtitle" data-i18n-key="testimonials_subtitle"></p>
+
+                <div class="testimonials__grid">
+
+                    <article class="card card--testimonial">
+                        <div class="card__rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="card__text" data-i18n-key="testimonial_1_text"></p>
+                        <div class="card__author">
+                            <img src="./assets/img/EVO-IMG/cristy-profile.png" alt="Avatar de Cristina de la Torre"
+                                class="author__avatar">
+                            <div class="author__info">
+                                <span class="author__name" data-i18n-key="testimonial_1_name"></span>
+                                <span class="author__title" data-i18n-key="testimonial_1_role"></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card card--testimonial">
+                        <div class="card__rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="card__text" data-i18n-key="testimonial_2_text"></p>
+                        <div class="card__author">
+                            <img src="./assets/img/EVO-IMG/victor-profile.png" alt="Avatar de Victor Iza"
+                                class="author__avatar">
+                            <div class="author__info">
+                                <span class="author__name" data-i18n-key="testimonial_2_name"></span>
+                                <span class="author__title" data-i18n-key="testimonial_2_role"></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card card--stat card--light">
+                        <p class="card__intro" data-i18n-key="stat_card_1_intro"></p>
+                        <p class="card__stat-number">98%</p>
+                        <p class="card__stat-label" data-i18n-key="stat_card_1_label"></p>
+                    </article>
+
+                    <article class="card card--stat card--accent">
+                        <p class="card__intro" data-i18n-key="stat_card_2_intro"></p>
+                        <p class="card__stat-number">175%</p>
+                        <p class="card__stat-label" data-i18n-key="stat_card_2_label"></p>
+                    </article>
+
+                    <article class="card card--testimonial">
+                        <div class="card__rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="card__text" data-i18n-key="testimonial_3_text"></p>
+                        <div class="card__author">
+                            <img src="./assets/img/EVO-IMG/tono-profile.png" alt="Avatar de Antonio Munoz"
+                                class="author__avatar">
+                            <div class="author__info">
+                                <span class="author__name" data-i18n-key="testimonial_3_name"></span>
+                                <span class="author__title" data-i18n-key="testimonial_3_role"></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card card--testimonial">
+                        <div class="card__rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="card__text" data-i18n-key="testimonial_4_text"></p>
+                        <div class="card__author">
+                            <img src="./assets/img/EVO-IMG/fuad-profile.png" alt="Avatar de Fuad David"
+                                class="author__avatar">
+                            <div class="author__info">
+                                <span class="author__name" data-i18n-key="testimonial_4_name"></span>
+                                <span class="author__title" data-i18n-key="testimonial_4_role"></span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!--FAQs-->
+        <section id="faq" class="faq">
+            <div class="faq__container">
+
+                <div class="faq__text-content">
+                    <h2 class="faq__title" data-i18n-key="faq_title"></h2>
+                    <p class="faq__subtitle" data-i18n-key="faq_subtitle"></p>
                 </div>
 
+                <div class="faq__accordion-container">
+                    <div class="accordion">
 
-                <div class="faqs__item">
-                    <div class="faqs__question">
-                        <span>¿ Métodos de pago ?</span>
-                        <span class="faq__icon">+</span>
-                    </div>
-                    <div class="faqs__answer">
-                        <p>Aceptamos pagos con tarjeta de crédito, débito y transferencias electrónicas. También
-                            contamos con opciones de seguro médico.</p>
-                    </div>
-                </div>
+                        <div class="accordion__item">
+                            <button class="accordion__header">
+                                <i class="fa-solid fa-circle-dot accordion__bullet"></i>
+                                <h3 class="accordion__title" data-i18n-key="faq_q1"></h3>
+                                <i class="fa-solid fa-chevron-up accordion__icon"></i>
+                            </button>
+                            <div class="accordion__content">
+                                <p data-i18n-key="faq_a1"></p>
+                            </div>
+                        </div>
 
-                <div class="faqs__item">
-                    <div class="faqs__question">
-                        <span>¿ Horario de atención ?</span>
-                        <span class="faq__icon">+</span>
-                    </div>
-                    <div class="faqs__answer">
-                        <p>Nuestro horario es de lunes a viernes de 8:00 a 20:00 y sábados de 9:00 a 14:00. Emergencias
-                            disponibles 24/7.</p>
-                    </div>
-                </div>
-                <div class="faqs__item">
-                    <div class="faqs__question">
-                        <span>¿Realizan seguimiento ?</span>
-                        <span class="faq__icon">+</span>
-                    </div>
-                    <div class="faqs__answer">
-                        <p>Sí, nuestro equipo se comunica contigo para asegurarse de que sigas correctamente tu
-                            tratamiento y responder cualquier duda.</p>
-                    </div>
-                </div>
-                <div class="faqs__item">
-                    <div class="faqs__question">
-                        <span>¿ Puedo cancelar una cita ?</span>
-                        <span class="faq__icon">+</span>
-                    </div>
-                    <div class="faqs__answer">
-                        <p>Puedes modificar o cancelar tu cita con al menos 24 horas de anticipación a través de nuestro
-                            portal o por teléfono.</p>
+                        <div class="accordion__item">
+                            <button class="accordion__header">
+                                <i class="fa-solid fa-circle-dot accordion__bullet"></i>
+                                <h3 class="accordion__title" data-i18n-key="faq_q2"></h3>
+                                <i class="fa-solid fa-chevron-up accordion__icon"></i>
+                            </button>
+                            <div class="accordion__content">
+                                <p data-i18n-key="faq_a2"></p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__header">
+                                <i class="fa-solid fa-circle-dot accordion__bullet"></i>
+                                <h3 class="accordion__title" data-i18n-key="faq_q3"></h3>
+                                <i class="fa-solid fa-chevron-up accordion__icon"></i>
+                            </button>
+                            <div class="accordion__content">
+                                <p data-i18n-key="faq_a3"></p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__header">
+                                <i class="fa-solid fa-circle-dot accordion__bullet"></i>
+                                <h3 class="accordion__title" data-i18n-key="faq_q4"></h3>
+                                <i class="fa-solid fa-chevron-up accordion__icon"></i>
+                            </button>
+                            <div class="accordion__content">
+                                <p data-i18n-key="faq_a4"></p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__header">
+                                <i class="fa-solid fa-circle-dot accordion__bullet"></i>
+                                <h3 class="accordion__title" data-i18n-key="faq_q5"></h3>
+                                <i class="fa-solid fa-chevron-up accordion__icon"></i>
+                            </button>
+                            <div class="accordion__content">
+                                <p data-i18n-key="faq_a5"></p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__header">
+                                <i class="fa-solid fa-circle-dot accordion__bullet"></i>
+                                <h3 class="accordion__title" data-i18n-key="faq_q6"></h3>
+                                <i class="fa-solid fa-chevron-up accordion__icon"></i>
+                            </button>
+                            <div class="accordion__content">
+                                <p data-i18n-key="faq_a6"></p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__header">
+                                <i class="fa-solid fa-circle-dot accordion__bullet"></i>
+                                <h3 class="accordion__title" data-i18n-key="faq_q7"></h3>
+                                <i class="fa-solid fa-chevron-up accordion__icon"></i>
+                            </button>
+                            <div class="accordion__content">
+                                <p data-i18n-key="faq_a7"></p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
         </section>
-        <!--PIE DE PAGINA-->
-        <footer class="layout__footer">
+        <!--PRICING-->
+        <section id="pricing" class="pricing">
+            <div class="pricing__container">
+
+                <div class="pricing__header">
+                    <h2 class="pricing__title" data-i18n-key="pricing_title"></h2>
+                    <div class="pricing__divider"></div>
+                </div>
+
+                <div class="pricing__grid">
+
+                    <article class="pricing-card">
+                        <h3 class="pricing-card__title" data-i18n-key="pricing_card1_title"></h3>
+                        <p class="pricing-card__description" data-i18n-key="pricing_card1_desc"></p>
+                        <p class="pricing-card__from" data-i18n-key="pricing_card1_from"></p>
+                        <p class="pricing-card__price">$279 USD<span class="pricing-card__scope"
+                                data-i18n-key="pricing_card1_scope"></span></p>
+                        <a href="#" class="btn btn--solid open-popup-btn" data-i18n-key="pricing_card1_cta"></a>
+                        <ul class="pricing-card__features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card1_f1"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card1_f2"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card1_f3"></span></li>
+                            <li><i data-i18n-key="pricing_card1_fitalic"></i></li>
+                        </ul>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h3 class="pricing-card__title" data-i18n-key="pricing_card2_title"></h3>
+                        <p class="pricing-card__description" data-i18n-key="pricing_card2_desc"></p>
+                        <p class="pricing-card__from" data-i18n-key="pricing_card2_from"></p>
+                        <p class="pricing-card__price">$429 USD<span class="pricing-card__scope"
+                                data-i18n-key="pricing_card2_scope"></span></p>
+                        <a href="#" class="btn btn--solid open-popup-btn" data-i18n-key="pricing_card2_cta"></a>
+                        <ul class="pricing-card__features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card2_f1"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card2_f2"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card2_f3"></span></li>
+                            <li><i data-i18n-key="pricing_card2_fitalic"></i></li>
+                        </ul>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h3 class="pricing-card__title" data-i18n-key="pricing_card3_title"></h3>
+                        <p class="pricing-card__description" data-i18n-key="pricing_card3_desc"></p>
+                        <p class="pricing-card__from" data-i18n-key="pricing_card3_from"></p>
+                        <p class="pricing-card__price">$589 USD<span class="pricing-card__scope"
+                                data-i18n-key="pricing_card3_scope"></span></p>
+                        <a href="#" class="btn btn--solid open-popup-btn" data-i18n-key="pricing_card3_cta"></a>
+                        <ul class="pricing-card__features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card3_f1"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card3_f2"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card3_f3"></span></li>
+                            <li><i data-i18n-key="pricing_card3_fitalic"></i></li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!--COURSES-->
+        <section id="courses" class="blog">
+            <div class="blog__container">
+                <div class="floating-dot"></div>
+
+                <h2 class="blog__title" data-i18n-key="courses_title"></h2>
+                <p class="blog__subtitle" data-i18n-key="courses_subtitle"></p>
+
+                <div class="blog__posts-grid">
+
+                    <article class="post-card">
+                        <a href="#" class="post-card__image-link">
+                            <img src="./assets/img/EVO-IMG/cover1.png" alt="Front-end course preview"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__meta">
+                                <span class="post-card__category" data-i18n-key="courses_post1_category"></span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#" data-i18n-key="courses_post1_title"></a>
+                            </h3>
+                            <p class="post-card__excerpt" data-i18n-key="courses_post1_excerpt"></p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="#" class="post-card__image-link">
+                            <img src="./assets/img/EVO-IMG/cover2.png" alt="AI design course preview"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__meta">
+                                <span class="post-card__category" data-i18n-key="courses_post2_category"></span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#" data-i18n-key="courses_post2_title"></a>
+                            </h3>
+                            <p class="post-card__excerpt" data-i18n-key="courses_post2_excerpt"></p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="blog__cta-container">
+                    <a href="#" class="btn btn--outline" data-i18n-key="courses_cta_button"></a>
+                </div>
+
+            </div>
+        </section>
+        <!--MARQUEE-->
+        <section class="skills-marquee">
+            <div class="marquee-row marquee-row--left">
+                <span class="skill-item">JavaScript</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">HTML</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">Node.js</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">CSS</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">Figma</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">JavaScript</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">HTML</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">Node.js</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">CSS</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">Figma</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+            </div>
+            <div class="marquee-row marquee-row--right">
+                <span class="skill-item">Figma</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">CSS</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">Node.js</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">HTML</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">JavaScript</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">Figma</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">CSS</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">Node.js</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">HTML</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+                <span class="skill-item">JavaScript</span>
+                <img src="./assets/img/icons/diamond.svg" alt="Diamond icon" class="skill-separator">
+            </div>
+        </section>
+        <!--FOOTER-->
+        <footer id="contact" class="footer">
             <div class="footer__container">
 
-                <section class="footer__real">
-                    <div class="footer__real__container">
-                        <p class="footer__real__title">Tu camino hacia el bienestar comienza con un solo clic</p>
-                        <p class="footer__real__subtitle">Reserva tu cita hoy y vive una atención experta diseñada para
-                            ti y para mejorar tu salud</p>
-                        <div class="footer__real__subcontainer">
-                            <p class="footer__real__button open-popup-btn">Contáctanos</p>
-                            <p class="footer__real__button">Nuestros servicios</p>
-                        </div>
+                <div class="footer__top">
+                    <div class="footer__column">
+                        <h4 class="footer__title" data-i18n-key="footer_col1_title"></h4>
+                        <ul class="footer__list">
+                            <li><a href="#services" data-i18n-key="footer_col1_link1"></a></li>
+                            <li><a href="#testimonials" data-i18n-key="footer_col1_link2"></a></li>
+                            <li><a href="#courses" data-i18n-key="footer_col1_link3"></a></li>
+                        </ul>
                     </div>
-                </section>
-                <section class="footer__main">
-                    <div class="footer__fright">
-                        <div class="footer__widget--50">
-                            <h6 class="widget__title">Servicios</h6>
-
-                            <ul class="widget__list">
-                                <li class="widget__item">
-                                    <a href="#" class="widget__link">Cardiologia</a>
-                                </li>
-                                <li class="widget__item">
-                                    <a href="#" class="widget__link">Neurologia</a>
-                                </li>
-                                <li class="widget__item">
-                                    <a href="#" class="widget__link">Pediatria</a>
-                                </li>
-                                <li class="widget__item">
-                                    <a href="#" class="widget__link">Traumatologia</a>
-                                </li>
-                                <li class="widget__item">
-                                    <a href="#" class="widget__link">Urologia</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="footer__widget--25">
-                            <h6 class="widget__title">Recursos</h6>
-
-                            <ul class="widget__list">
-                                <li class="widget__item">
-                                    <a href="#" class="widget__link">Blog</a>
-                                </li>
-                                <li class="widget__item">
-                                    <a href="#" class="widget__link">Formacion</a>
-                                </li>
-                                <li class="widget__item">
-                                    <a href="#" class="widget__link">Portafolio</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer__widget--25">
-                            <h6 class="widget__title">Soporte</h6>
-
-                            <ul class="widget__list">
-                                <li class="widget__item">
-                                    <a href="#" class="widget__link">Contacto</a>
-                                </li>
-                                <li class="widget__item">
-                                    <a href="#" class="widget__link">Politica y Privaciodad</a>
-                                </li>
-                                <li class="widget__item">
-                                    <a href="#" class="widget__link">Terminos de Uso</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="footer__fleft">
-                        <div class="fleft__container">
-                            <h2 class="fleft__title">Newsletter</h2>
-                            <p class="fleft__subtitle">
-                                Recibe actualizaciones al instante, nuevas publicaciones, promociones y más. Unete al
-                                club!
-                            </p>
-                            <form class="fleft__form">
-                                <div class="fleft__group">
-                                    <span class="fleft__mail-icon">
-                                        <i class="fa-solid fa-envelope-open fleft__icon"></i>
-                                    </span>
-                                    <input type="email" class="fleft__form-control" placeholder="Correo Electronico">
-                                    <button class="fleft__btn">Suscribete</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-
-                </section>
-                <section class="footer__top">
-                    <img class="footer__img" src="./assets/img/MEDICALL/MEDICALLname-nobg.png" alt="medical logo">
-                    <ul class="footer__social">
-                        <li class="social__item">
-                            <a href="#" class="social__link">
-                                <i class="fa-brands fa-facebook-f social__img"></i>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="#" class="social__link">
-                                <i class="fa-brands fa-twitter social__img"></i>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="#" class="social__link">
-                                <i class="fa-brands fa-youtube social__img"></i>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="#" class="social__link">
-                                <i class="fa-brands fa-linkedin social__img"></i>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="#" class="social__link">
-                                <i class="fa-brands fa-instagram social__img"></i>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="#" class="social__link">
-                                <i class="fa-brands fa-pinterest-p social__img"></i>
-                            </a>
-                        </li>
-
-                    </ul>
-                </section>
-
-                <section class="footer__bottom">
-                    <div class="footer__copyright">
-                        <span class="copyright__text">
-                            &copy; 2025. Todos los Derechos Reservados a <a href="https://www.instagram.com/evokode_studio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Evokode Studio</a>
-                            by Erik Vigil
-                        </span>
-                    </div>
-                    <div class="footer__links">
-                        <ul class="footer__flinks">
-                            <li class="flinks__item flinks__item--separator">
-                                <a href="#" class="flinks__title">Politicas de privacidad</a>
+                    <div class="footer__column">
+                        <h4 class="footer__title" data-i18n-key="footer_col2_title"></h4>
+                        <ul class="footer__list">
+                            <li>
+                                <p data-i18n-key="footer_col2_line1"></p>
                             </li>
-                            <li class="flinks__item flinks__item--separator">
-                                <a href="#" class="flinks__title">Terminos de Uso</a>
+                            <li>
+                                <p data-i18n-key="footer_col2_line2"></p>
                             </li>
                         </ul>
                     </div>
+                    <div class="footer__column">
+                        <h4 class="footer__title" data-i18n-key="footer_col3_title"></h4>
+                        <ul class="footer__list">
+                            <li><a href="https://www.instagram.com/evokode_studio/" target="_blank"
+                                    data-i18n-key="footer_col3_link1"></a></li>
+                            <li><a href="#" target="_blank" data-i18n-key="footer_col3_link2"></a></li>
+                            <li><a href="https://www.behance.net/erikvigil-evokode" target="_blank"
+                                    data-i18n-key="footer_col3_link3"></a></li>
+                        </ul>
+                    </div>
+                </div>
 
-                </section>
+                <div class="footer__bottom">
+                    <div class="footer__copyright">
+                        <img src="./assets/img/EVO-IMG/ErikProfile.jpeg" alt="Logo de EVOKODE STUDIO"
+                            class="footer__logo">
+                        <p>&copy; 2025 EVOKODE STUDIO <br> <span data-i18n-key="footer_copyright_text"></span></p>
+                    </div>
+
+                    <div class="footer__contact-form">
+                        <form name="contact" method="POST" data-netlify="true">
+                            <input type="hidden" name="form-name" value="contact" />
+                            <label for="message" data-i18n-key="footer_form_title"></label>
+                            <textarea name="message" id="message" rows="5" required
+                                data-i18n-placeholder-key="footer_form_placeholder"></textarea>
+                            <button type="submit" class="btn btn--outline" data-i18n-key="footer_form_button"></button>
+                        </form>
+                    </div>
+                </div>
+
             </div>
-
         </footer>
+
+
     </div>
+
 </body>
 
 </html>

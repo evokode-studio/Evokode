@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/popup.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+
+    <script src="./assets/js/dark.js" defer></script>
+    <script src="./assets/js/popup.js" defer></script>
+    <script src="./assets/js/header-scroll.js" defer></script>
+    <script src="./assets/js/mobile-menu.js" defer></script>
+    <script src="./assets/js/i18n.js" defer></script>
+    <script src="./assets/js/project-loader.js" defer></script>
+
+    <script src="./assets/js/accordion.js" defer></script>
+    <script src="./assets/js/text-animation-hi.js" defer></script>
+
+    <title>Project | EVOKODE STUDIO</title>
+    <link rel="icon" href="./assets/img/EVO-IMG/EVOKODE-removebg-preview.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <div class="popup-form-container">
+                <h2 data-i18n-key="popup_title"></h2>
+                <p data-i18n-key="popup_subtitle"></p>
+                <form id="contact-form">
+                    <label for="service-popup" data-i18n-key="popup_form_label"></label>
+                    <select id="service-popup" required>
+                        <option value="" data-i18n-key="popup_form_option_default"></option>
+                        <option value="Web Design" data-i18n-key="popup_form_option_1"></option>
+                        <option value="Web Development" data-i18n-key="popup_form_option_2"></option>
+                        <option value="Branding" data-i18n-key="popup_form_option_3"></option>
+                        <option value="Wedding Invitation" data-i18n-key="popup_form_option_4"></option>
+                    </select>
+                    <button type="submit" class="whatsapp-btn" data-i18n-key="popup_form_button"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout project-detail-page">
+        <header class="header">
+
+            <div class="desktop-nav-container">
+                <nav class="navbar">
+                    <a href="#" class="navbar__logo">
+                        <img src="./assets/img/EVO-IMG/ErikProfile.jpeg" alt="Avatar de Erik">
+                    </a>
+                    <ul class="navbar__menu">
+                        <li class="navbar__item"><a href="#services" class="navbar__link"
+                                data-i18n-key="nav_services"></a></li>
+                        <li class="navbar__item"><a href="#featured-projects" class="navbar__link"
+                                data-i18n-key="nav_projects"></a></li>
+                        <li class="navbar__item"><a href="#pricing" class="navbar__link" data-i18n-key="nav_prices"></a>
+                        </li>
+
+                        <li class="navbar__item nav-item--language"> <a href="#" class="navbar__link"
+                                aria-label="Change language"><i class="fas fa-globe"></i></a>
+                            <div class="language-dropdown-wrapper">
+                                <ul class="language-dropdown">
+                                    <li><button class="language-switcher" data-lang="en">English</button></li>
+                                    <li><button class="language-switcher" data-lang="es">Español</button></li>
+                                    <li><button class="language-switcher" data-lang="pt">Português</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="navbar__cta open-popup-btn" data-i18n-key="nav_contact"></a>
+                </nav>
+
+                <div class="status-bar">
+                    <a href="#" class="status-bar__link">
+                        <img src="./assets/img/EVO-IMG/ErikProfile.jpeg" alt="Avatar de Erik"
+                            class="status-bar__avatar">
+                        <span class="status-bar__text" data-i18n-key="status_available"></span>
+                        <span class="status-bar__indicator"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mobile-nav-container">
+                <div class="mobile-header">
+                    <a href="#" class="status-bar__link">
+                        <img src="./assets/img/EVO-IMG/ErikProfile.jpeg" alt="Avatar de Erik"
+                            class="status-bar__avatar">
+                        <span class="status-bar__text" data-i18n-key="status_available"></span>
+                        <span class="status-bar__indicator"></span>
+                    </a>
+                    <button class="mobile-header__hamburger-btn" id="hamburger-btn" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu__header">
+                    <a href="#" class="mobile-menu__logo">
+                        <img src="./assets/img/EVO-IMG/ErikProfile.jpeg" alt="Avatar de Erik">
+                    </a>
+                    <button class="mobile-menu__close-btn" id="close-btn" aria-label="Cerrar menú">
+                        &times;
+                    </button>
+                </div>
+                <nav class="mobile-menu__nav">
+                    <ul>
+                        <li><a href="#" data-i18n-key="nav_home"></a></li>
+                        <li><a href="#services" data-i18n-key="nav_services"></a></li>
+                        <li><a href="#featured-projects" data-i18n-key="nav_projects"></a></li>
+                        <li><a href="#pricing" data-i18n-key="nav_prices"></a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu__languages">
+                    <button class="language-switcher" data-lang="en">English</button>
+                    <button class="language-switcher" data-lang="es">Español</button>
+                    <button class="language-switcher" data-lang="pt">Português</button>
+                </div>
+                <a href="#contact" class="mobile-menu__cta open-popup-btn" data-i18n-key="nav_contact"></a>
+            </div>
+
+        </header>
+
+        <main>
+            <section class="project-hero">
+                <div class="project-hero__container">
+                    <span class="project-hero__category" data-project-key="category"></span>
+                    <h1 class="project-hero__title" data-project-key="title"></h1>
+                    <p class="project-hero__subtitle" data-project-key="subtitle"></p>
+                    <div class="project-hero__meta-grid">
+                        <div class="meta-item"><span class="meta-item__label">Year :</span><span
+                                class="meta-item__value" data-project-key="meta_year"></span></div>
+                        <div class="meta-item"><span class="meta-item__label">Industry :</span><span
+                                class="meta-item__value" data-project-key="meta_industry"></span></div>
+                        <div class="meta-item"><span class="meta-item__label">Client :</span><span
+                                class="meta-item__value" data-project-key="meta_client"></span></div>
+                        <div class="meta-item"><span class="meta-item__label">Project Duration :</span><span
+                                class="meta-item__value" data-project-key="meta_duration"></span></div>
+                    </div>
+                    <div class="project-hero__image-wrapper">
+                        <img src="" alt="" data-project-key="hero_image">
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-content">
+                <div class="project-content__container">
+                    <div class="content-block">
+                        <h2 class="content-block__title" data-project-key="problem_title"></h2>
+                        <p class="content-block__text" data-project-key="problem_text"></p>
+                    </div>
+                    <div class="content-block__image">
+                        <img src="" alt="" data-project-key="solution_image_1">
+                    </div>
+                    <div class="content-block">
+                        <h2 class="content-block__title" data-project-key="solution_title"></h2>
+                        <p class="content-block__text" data-project-key="solution_text"></p>
+                    </div>
+                    <div class="content-block__image-grid">
+                        <img src="" alt="" data-project-key="gallery_image_1">
+                        <img src="" alt="" data-project-key="gallery_image_2">
+                        <img src="" alt="" data-project-key="gallery_image_3">
+                        <img src="" alt="" data-project-key="gallery_image_4">
+                    </div>
+                </div>
+            </section>
+            <div class="project-cta-container">
+                <a href="#" id="visit-site-btn" class="btn btn--outline" target="_blank" rel="noopener noreferrer"
+                    data-i18n-key="project_visit_site_btn"></a>
+            </div>
+        </main>
+
+        <div class="theme-switcher">
+            <div class="theme-switcher__toggle"></div>
+        </div>
+        <!--MORE PROJECTS-->
+        <section id="projects" class="projects">
+            <div class="projects__container">
+
+                <div class="projects__header">
+                    <div class="dot"></div>
+                    <h2 class="projects__title" data-i18n-key="more_projects_title"></h2>
+                </div>
+
+                <div class="projects__grid">
+
+                    <article class="post-card">
+                        <a href="project.html?id=onepager" class="post-card__image-link">
+                            <img src="./assets/img/EVO-IMG/onepager-mockup.png" alt="One Pager project preview"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__meta">
+                                <span class="post-card__category" data-i18n-key="more_projects_card1_category"></span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#" data-i18n-key="more_projects_card1_title"></a>
+                            </h3>
+                            <p class="post-card__excerpt" data-i18n-key="more_projects_card1_excerpt"></p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="project.html?id=weddinginvitation" class="post-card__image-link">
+                            <img src="./assets/img/EVO-IMG/ari-mockup.png" alt="Wedding invitation project preview"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__meta">
+                                <span class="post-card__category" data-i18n-key="more_projects_card2_category"></span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#" data-i18n-key="more_projects_card2_title"></a>
+                            </h3>
+                            <p class="post-card__excerpt" data-i18n-key="more_projects_card2_excerpt"></p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="project.html?id=gamerblog" class="post-card__image-link">
+                            <img src="./assets/img/EVO-IMG/gam3r-mockup.png" alt="Gamer blog project preview"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__meta">
+                                <span class="post-card__category" data-i18n-key="more_projects_card3_category"></span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#" data-i18n-key="more_projects_card3_title"></a>
+                            </h3>
+                            <p class="post-card__excerpt" data-i18n-key="more_projects_card3_excerpt"></p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="project.html?id=vowsandlovers" class="post-card__image-link">
+                            <img src="./assets/img/EVO-IMG/vyl-mockup.png" alt="Vows and Lovers project preview"
+                                class="post-card__image">
+                        </a>
+                        <div class="post-card__body">
+                            <div class="post-card__meta">
+                                <span class="post-card__category" data-i18n-key="more_projects_card4_category"></span>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#" data-i18n-key="more_projects_card4_title"></a>
+                            </h3>
+                            <p class="post-card__excerpt" data-i18n-key="more_projects_card4_excerpt"></p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!--PRICING-->
+        <section id="pricing" class="pricing">
+            <div class="pricing__container">
+
+                <div class="pricing__header">
+                    <h2 class="pricing__title" data-i18n-key="pricing_title"></h2>
+                    <div class="pricing__divider"></div>
+                </div>
+
+                <div class="pricing__grid">
+
+                    <article class="pricing-card">
+                        <h3 class="pricing-card__title" data-i18n-key="pricing_card1_title"></h3>
+                        <p class="pricing-card__description" data-i18n-key="pricing_card1_desc"></p>
+                        <p class="pricing-card__from" data-i18n-key="pricing_card1_from"></p>
+                        <p class="pricing-card__price">$279 USD<span class="pricing-card__scope"
+                                data-i18n-key="pricing_card1_scope"></span></p>
+                        <a href="#" class="btn btn--solid open-popup-btn" data-i18n-key="pricing_card1_cta"></a>
+                        <ul class="pricing-card__features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card1_f1"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card1_f2"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card1_f3"></span></li>
+                            <li><i data-i18n-key="pricing_card1_fitalic"></i></li>
+                        </ul>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h3 class="pricing-card__title" data-i18n-key="pricing_card2_title"></h3>
+                        <p class="pricing-card__description" data-i18n-key="pricing_card2_desc"></p>
+                        <p class="pricing-card__from" data-i18n-key="pricing_card2_from"></p>
+                        <p class="pricing-card__price">$429 USD<span class="pricing-card__scope"
+                                data-i18n-key="pricing_card2_scope"></span></p>
+                        <a href="#" class="btn btn--solid open-popup-btn" data-i18n-key="pricing_card2_cta"></a>
+                        <ul class="pricing-card__features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card2_f1"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card2_f2"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card2_f3"></span></li>
+                            <li><i data-i18n-key="pricing_card2_fitalic"></i></li>
+                        </ul>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h3 class="pricing-card__title" data-i18n-key="pricing_card3_title"></h3>
+                        <p class="pricing-card__description" data-i18n-key="pricing_card3_desc"></p>
+                        <p class="pricing-card__from" data-i18n-key="pricing_card3_from"></p>
+                        <p class="pricing-card__price">$589 USD<span class="pricing-card__scope"
+                                data-i18n-key="pricing_card3_scope"></span></p>
+                        <a href="#" class="btn btn--solid open-popup-btn" data-i18n-key="pricing_card3_cta"></a>
+                        <ul class="pricing-card__features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card3_f1"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card3_f2"></span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n-key="pricing_card3_f3"></span></li>
+                            <li><i data-i18n-key="pricing_card3_fitalic"></i></li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <footer id="contact" class="footer">
+            <div class="footer__container">
+                <div class="footer__top">
+                    <div class="footer__column">
+                        <h4 class="footer__title" data-i18n-key="footer_col1_title"></h4>
+                        <ul class="footer__list">
+                            <li><a href="index.html#services" data-i18n-key="footer_col1_link1"></a></li>
+                            <li><a href="index.html#testimonials" data-i18n-key="footer_col1_link2"></a></li>
+                            <li><a href="index.html#courses" data-i18n-key="footer_col1_link3"></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4 class="footer__title" data-i18n-key="footer_col2_title"></h4>
+                        <ul class="footer__list">
+                            <li>
+                                <p data-i18n-key="footer_col2_line1"></p>
+                            </li>
+                            <li>
+                                <p data-i18n-key="footer_col2_line2"></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4 class="footer__title" data-i18n-key="footer_col3_title"></h4>
+                        <ul class="footer__list">
+                            <li><a href="https://www.instagram.com/evokode_studio/" target="_blank"
+                                    data-i18n-key="footer_col3_link1"></a></li>
+                            <li><a href="#" target="_blank" data-i18n-key="footer_col3_link2"></a></li>
+                            <li><a href="https://www.behance.net/erikvigil-evokode" target="_blank"
+                                    data-i18n-key="footer_col3_link3"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copyright">
+                        <img src="./assets/img/EVO-IMG/ErikProfile.jpeg" alt="Logo de EVOKODE STUDIO"
+                            class="footer__logo">
+                        <p>&copy; 2025 EVOKODE STUDIO <br> <span data-i18n-key="footer_copyright_text"></span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

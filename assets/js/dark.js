@@ -1,29 +1,35 @@
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Modo oscuro activado");
-    let switcher = document.querySelector(".switcher__btn");
-    let light = document.querySelector(".switcher__icon-light");
-    let dark = document.querySelector(".switcher__icon-dark");
+// Archivo: assets/js/dark.js (Versión Completa y Funcional)
 
-    switcher.addEventListener("click", () => {
-        let head = document.head;
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Seleccionar los elementos necesarios
+    const themeSwitcher = document.querySelector('.theme-switcher');
+    const body = document.body;
 
-        let link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.type = "text/css";
-        link.href = "./assets/css/dark.css";
-        link.id = "theme-dark";
+    // Si no encuentra el botón, no hace nada más.
+    if (!themeSwitcher) {
+        return;
+    }
 
-        let theme_dark = document.querySelector("#theme-dark");
+    // 2. Función para cambiar el tema
+    const toggleTheme = () => {
+        // Añade o quita la clase 'light-theme' del body
+        body.classList.toggle('light-theme');
 
-        if(theme_dark){
-            head.removeChild(theme_dark);
-            light.style.display = "block";
-            dark.style.display = "none";
-        }else{
-            head.appendChild(link);
-            light.style.display = "none";
-            dark.style.display = "block";
+        // 3. Guardar la preferencia del usuario en su navegador
+        if (body.classList.contains('light-theme')) {
+            localStorage.setItem('theme', 'light');
+        } else {
+            localStorage.setItem('theme', 'dark');
         }
-    });
-})
+    };
 
+    // 4. Añadir el evento de 'click' al botón
+    themeSwitcher.addEventListener('click', toggleTheme);
+
+    // 5. Al cargar la página, revisar si el usuario ya tenía una preferencia guardada
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'light') {
+        body.classList.add('light-theme');
+    }
+});

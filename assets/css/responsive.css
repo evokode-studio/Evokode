@@ -311,14 +311,22 @@
     grid-template-columns: 1fr;
     text-align: center;
   }
+/* === AJUSTES PARA FEATURED PROJECTS === */
+
+    .project-showcase {
+        aspect-ratio: 1 / 1; /* <-- ¡CAMBIA A 1 / 1 (CUADRADO)! */
+    }
+
+    .project-slide {
+        padding: 2.5rem; 
+    }
+
+    /* (Mantén o elimina los ajustes opcionales de font-size según tu preferencia) */
+    .project-showcase__title {
+         font-size: clamp(2.2rem, 3.5vw, 3rem); 
+    }
+     .project-showcase__description {
+        font-size: 1.4rem; 
+    }
 }
 
-@media (max-width: 550px) {
-  .navbar__menu {
-    display: none;
-  }
-
-  .header {
-    max-width: 200px;
-  }
-}
